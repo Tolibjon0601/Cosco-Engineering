@@ -1,0 +1,60 @@
+
+<div class="relative w-full h-[60vh] bg-cover bg-center" style="background-image: url('assets/image/page-title-bg.jpg');">
+  <div class="absolute inset-0 bg-black/50"></div>
+
+
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Bizning ishlar</h1>
+    <div class="flex items-center gap-2 text-sm text-gray-300">
+      <a routerLink="/" class="hover:underline text-[#C4751A] font-bold text-xl">Bosh sahifa</a>
+      <span>/</span>
+      <span class="text-white">Bizning ishlar</span>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Swiper Section -->
+<swiper-container
+  loop="true"
+  autoplay-delay="4000"
+  speed="1500"
+  autoplay="true"
+  observer="true"
+  resize-observer="true"
+  effect="fade"
+  class="w-full h-[600px] relative overflow-hidden"
+>
+  <swiper-slide *ngFor="let slide of slidessecond">
+    <div
+      class="relative w-full h-full grid grid-cols-1 lg:grid-cols-2 text-white"
+    >
+      <!-- Blurred Background -->
+      <div
+        class="absolute inset-0 -z-10 bg-cover bg-center blur-sm brightness-50"
+        [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
+      ></div>
+      <!-- Image Side -->
+      <div class="hidden lg:flex items-center justify-center">
+        <img
+          [src]="slide.image"
+          alt="Stat Image"
+          class="max-w-[800px] w-full h-full object-contain p-6"
+        />
+      </div>
+      <!-- Text Side -->
+      <div class="flex flex-col justify-center px-8 lg:px-20 py-10">
+        <span class="text-sm text-[#C4751A] uppercase font-semibold"
+          >Loyihalar</span
+        >
+        <div class="mt-6 text-lg">
+          <p class="text-5xl font-bold">{{ slide.stats }}</p>
+          <p class="text-white text-base max-w-md mt-2">
+            {{ slide.statsDescription }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>

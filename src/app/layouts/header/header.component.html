@@ -1,0 +1,112 @@
+<header
+  [ngClass]="{
+    'bg-transparent': !isScrolled,
+    'bg-black/40 shadow-md backdrop-blur-md': isScrolled
+  }"
+
+
+  class="fixed top-0 left-0 z-50 w-full transition-all duration-400 py-2 px-5 flex items-center justify-between text-white"
+>
+  <!-- Logo -->
+  <div>
+    <img src="../../../assets/image/logo.png" alt="logo" class="h-10 sm:h-20" />
+  </div>
+
+  <!-- Desktop Menu -->
+  <nav class="hidden lg:flex items-center gap-8 text-lg font-semibold">
+    <a
+      routerLink="/home"
+      routerLinkActive="text-[#C4751A] font-bold"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="hover:text-[#C4751A] transition"
+      >{{ 'nav.main' | translate }}</a
+    >
+    <a
+      routerLink="/about"
+      routerLinkActive="text-[#C4751A] font-bold "
+      class="hover:text-[#C4751A] transition"
+      >{{ 'nav.about' | translate }}</a
+    >
+    <a
+    routerLink="/project"
+    routerLinkActive="text-[#C4751A] font-bold"
+    class="hover:text-[#C4751A] transition"
+    >{{ 'nav.projects' | translate }}</a
+  >
+    <a
+      routerLink="/contact"
+      routerLinkActive="text-[#C4751A] font-bold"
+      class="hover:text-[#C4751A] transition"
+      >{{ 'nav.contact' | translate }}</a
+    >
+
+    <div class="relative hidden lg:block">
+      <button
+        class="flex items-center gap-2   px-3 py-1 rounded cursor-pointer"
+        (click)="toggleDropdown()"
+      >
+        <img [src]="selectedFlag" alt="flag" class="h-4" />
+        <span>{{ getLangName(selectedLang) }}</span>
+      </button>
+      <ul
+        *ngIf="dropdownOpen"
+        class="absolute right-0 mt-2 w-40 bg-white text-black shadow-md rounded z-50 overflow-hidden"
+      >
+        <li
+          *ngFor="let lang of languages"
+          (click)="selectLanguage(lang)"
+          [class.bg-gray-200]="lang.code === selectedLang"
+          class="px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer"
+        >
+          <img [src]="lang.flag" alt="{{ lang.name }}" class="h-4" />
+          {{ lang.name }}
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Language Dropdown (Desktop Only) -->
+
+
+  <!-- Mobile Menu Button -->
+  <button (click)="toggleMenu()" class="lg:hidden text-2xl">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Mobile Sidebar -->
+  <div
+    *ngIf="visible"
+    class="fixed inset-0 bg-black/60 z-[9999] flex justify-end"
+    (click)="closeMenu()"
+  >
+    <div
+      class="w-[80%] max-w-xs h-full bg-[#0A506D] text-white p-6 shadow-lg relative animate-slide-in-right"
+      (click)="$event.stopPropagation()"
+    >
+      <button class="absolute top-4 right-4 text-2xl" (click)="closeMenu()">&times;</button>
+
+      <nav class="flex flex-col gap-4 mt-12 text-lg font-semibold">
+        <a routerLink="/home" (click)="closeMenu()" class="hover:text-blue-300">Asosiy</a>
+        <a routerLink="/about" (click)="closeMenu()" class="hover:text-blue-300">Kompaniya haqida</a>
+        <a routerLink="/project" (click)="closeMenu()" class="hover:text-blue-300">Loyihalar</a>
+        <a routerLink="/contact" (click)="closeMenu()" class="hover:text-blue-300">Aloqa</a>
+      </nav>
+      <div class="relative mt-2">
+        <ul
+          class="absolute  mt-2 w-max flex flex-row items-center gap-2 bg-white text-black shadow-md rounded z-50 overflow-hidden"
+        >
+          <li
+            *ngFor="let lang of languages"
+            (click)="selectLanguage(lang)"
+            [class.bg-blue-200]="lang.code === selectedLang"
+            class="px-2 py-1 hover:bg-blue-400 flex items-center gap-1 cursor-pointer"
+          >
+            <img [src]="lang.flag" alt="{{ lang.name }}" class="h-4" />
+            {{ lang.name }}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</header>

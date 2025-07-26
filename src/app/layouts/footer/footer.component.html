@@ -1,0 +1,51 @@
+<footer class="relative py-20 px-4 bg-cover bg-center text-white"  style="background-image: url('assets/image/slider_2.jpg');">
+
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0  z-0 bg-gradient-to-tr  from-[#D2B48C]/90 to-[#5C4033]/80"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+
+      <!-- Contact -->
+      <div>
+        <img src="assets/image/logo.png" alt="Logo" class="h-20 mb-4" />
+        <h2 class="text-xl font-bold mb-3">Aloqa</h2>
+        <p class="text-sm uppercase mb-1">Telefon</p>
+        <a href="tel:+99871 255-88-22 " class="block text-lg font-semibold hover:text-[#C4751A]">
+          +998 (71) 255-88-22
+        </a>
+        <p class="mt-4 text-sm leading-relaxed">
+          Toshkent shahar, Mirobod tumani <br> Mironshoh 6-boshiberk ko’cha, 18/141-uy        </p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <h2 class="text-xl font-bold mb-3">Pochta manzil</h2>
+        <a [href]="'mailto:' + email" class="text-lg font-semibold mb-4 block">{{ email }}</a>
+        <div class="flex space-x-4 text-xl mt-4">
+          <a href="#" class="hover:text-[#C4751A]"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" class="hover:text-[#C4751A]"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" class="hover:text-[#C4751A]"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="lg:col-span-2">
+        <div class="w-full h-64 md:h-80 rounded-xl shadow-lg overflow-hidden">
+          <div id="yandex-map" class="w-full h-full rounded-xl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Strip -->
+  <div class="relative z-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300 gap-2 text-center">
+      <p>© {{ currentYear }} – BARCHA HUQUQLAR HIMOYALANGAN</p>
+      <p>
+        Sayt <a href="https://isbd.uz/" target="_blank" class="text-white font-semibold hover:text-[#C4751A]">SBD</a> tomonidan ishlab chiqilgan
+      </p>
+    </div>
+  </div>
+</footer>

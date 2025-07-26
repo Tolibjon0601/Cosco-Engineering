@@ -1,0 +1,90 @@
+<!-- Page Title Section -->
+<div
+  class="relative w-full h-[60vh] bg-cover bg-center"
+  style="background-image: url('assets/image/page-title-bg.jpg');"
+>
+  <div class="absolute inset-0 bg-gradient-to-br from-[#3a3a3a]/60 to-[#1d1d1d]/60"></div>
+
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Biz bilan bog'laning</h1>
+    <div class="flex items-center gap-2 text-sm text-gray-300">
+      <a routerLink="/" class="hover:underline text-[#C4751A] font-bold text-xl">Bosh sahifa</a>
+      <span>/</span>
+      <span class="text-white">Aloqa</span>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form Section -->
+<section
+  class="relative py-20 px-4 bg-cover bg-center"
+  style="background-image: url('assets/image/slider_3.jpg');"
+>
+  <div class="absolute inset-0 bg-gradient-to-tr from-[#D2B48C]/90 to-[#5C4033]/85 z-0"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto">
+    <div class="bg-white/90 shadow-xl rounded-xl p-8 lg:p-10 backdrop-blur-sm border border-[#E6D3BD]">
+      <form
+        action="https://formsubmit.io/send/your-email@example.com"
+        method="POST"
+        class="space-y-6"
+      >
+        <input type="text" name="_formsubmit_id" style="display:none" />
+        <input type="hidden" name="_redirect" value="https://coscoengineering.uz/success" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Ism</label>
+            <input
+              type="text"
+              name="Ism"
+              placeholder="Ismingiz"
+              required
+              class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Telefon</label>
+            <input
+              type="tel"
+              name="Telefon"
+              placeholder="+998 __ ___ __ __"
+              required
+              class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input
+            type="email"
+            name="Email"
+            placeholder="Email (ixtiyoriy)"
+            class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Xabar</label>
+          <textarea
+            name="Xabar"
+            rows="5"
+            placeholder="Xabaringizni yozing"
+            required
+            class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
+          ></textarea>
+        </div>
+
+        <div class="text-center lg:text-right">
+          <button
+            type="submit"
+            class="bg-[#5C4033] text-white px-6 py-2 rounded-md hover:bg-[#3D2A1D] transition-all font-semibold shadow-md"
+          >
+            Yuborish
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

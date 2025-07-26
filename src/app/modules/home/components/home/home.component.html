@@ -1,0 +1,307 @@
+<div class="relative w-screen h-screen">
+  <swiper-container
+  loop="true"
+  autoplay-delay="4000"
+  class="w-full h-full"
+  speed="1500"
+  effect="slide"
+  >
+    <swiper-slide *ngFor="let slide of slides">
+      <div
+        class="w-full h-full bg-cover bg-center relative"
+        [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
+      >
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center px-5 md:px-20">
+          <div class="text-white z-40 max-w-[850px] mt-32">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">{{ slide.title }}</h2>
+            <button  class="bg-white text-black px-6 py-3 rounded"><a routerLink="/contact" >{{ slide.button }}</a></button>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+
+</div>
+
+
+
+<section class="w-full bg-white py-16 px-4 lg:px-20">
+  <div class="max-w-7xl mx-auto">
+    <!-- Upper part: Title and text -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 items-center">
+      <div>
+        <span class="text-sm text-[#C4751A] uppercase font-semibold">Biz haqimizda</span>
+        <h2 class="text-lg md:text-xl font-bold mt-2 mb-4 text-gray-800">
+          Cosco Engineering — bu zamonaviy texnologiyalar, sifatli injiniring va ishonchli qurilishning uyg‘unlashuvi.
+        </h2>
+      </div>
+      <div>
+        <p class="text-gray-600 text-normal leading-relaxed">
+          Kompaniyamiz muhandislikdan tortib to to‘liq qurilish yakunigacha bo‘lgan barcha bosqichlarni amalga oshiradi. Har bir loyiha — bu biz uchun mas’uliyat va ishonch ramzi. Biz yirik sanoat inshootlari, turar-joy majmualari va tijorat binolarini loyihalashtirib, sifatli tarzda hayotga tatbiq etamiz. Texnik jihatdan mukammallik, ekologik xavfsizlik va iqtisodiy samaradorlik — asosiy ustuvorliklarimizdir.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom part: 3 info cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="transition text-center">
+        <img
+          src="https://bm-group.uz/wp-content/uploads/2019/10/development_1.png"
+          alt="Yirik loyihalar"
+          class="w-48 h-auto mx-auto mb-4"
+        />
+        <h3 class="text-xl font-bold text-[#C4751A] mb-2">
+          <a routerLink="about">Yirik loyihalar</a>
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Cosco Engineering O‘zbekiston bo‘ylab ko‘plab yirik infratuzilma va turar-joy loyihalarini muvaffaqiyatli amalga oshirib kelmoqda.
+        </p>
+        <a
+          routerLink="about"
+          class="inline-flex items-center text-[#C4751A] hover:underline font-medium"
+        >
+          Batafsil
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="text-center">
+        <img
+          src="https://bm-group.uz/wp-content/uploads/2019/10/development_2.png"
+          alt="Innovatsion yondashuv"
+          class="w-48 h-auto mx-auto mb-4"
+        />
+        <h3 class="text-xl font-bold text-[#C4751A] mb-2">
+          <a routerLink="about">Innovatsion yondashuv</a>
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Har bir qurilishda zamonaviy texnologiyalar va ilg‘or injiniring yechimlaridan foydalanamiz. Bu bizni farqlab turadi.
+        </p>
+        <a
+          routerLink="about"
+          class="inline-flex items-center text-[#C4751A] hover:underline font-medium"
+        >
+          Batafsil
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="text-center">
+        <img
+          src="https://bm-group.uz/wp-content/uploads/2019/10/investor.png"
+          alt="Ishonchli hamkorlik"
+          class="w-48 mx-auto h-auto mb-4"
+        />
+        <h3 class="text-xl font-bold text-[#C4751A] mb-2">
+          <a routerLink="about">Ishonchli hamkorlik</a>
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Davlat va xususiy sektor bilan hamkorlikda bir qancha muvaffaqiyatli loyihalarni amalga oshirdik. Bizga ishonishadi — chunki natija bor.
+        </p>
+        <a
+          routerLink="about"
+          class="inline-flex items-center text-[#C4751A] hover:underline font-medium"
+        >
+          Batafsil
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="relative w-full h-screen">
+  <div class="relative w-screen h-screen">
+
+  <swiper-container
+    loop="true"
+    autoplay-delay="2000"
+    class="w-full h-full"
+    speed="1500"
+    effect="fade"
+  >
+  <swiper-slide *ngFor="let slide of slidessecond">
+    <div class="w-full h-full grid grid-cols-1 lg:grid-cols-2">
+      <!-- Rasm qismi -->
+      <div
+        class="w-full h-full bg-cover bg-center"
+        [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
+      ></div>
+
+      <!-- Matn qismi -->
+      <div
+        class="bg-gradient-to-tr from-[#D2B48C] to-[#5C4033]
+        text-white flex flex-col justify-center px-8 lg:px-20 py-10"
+      >
+        <!-- Ikonka / Belgilovchi qisqacha -->
+        <span class="text-sm text-[#C4751A] uppercase font-semibold tracking-widest mb-2">
+          Loyihamiz haqida
+        </span>
+
+        <!-- Statistika -->
+        <div class="mt-4">
+          <p class="text-5xl font-bold">{{ slide.stats }}</p>
+          <p class="text-white text-base max-w-md mt-4 leading-relaxed">
+            {{ slide.statsDescription }}
+          </p>
+        </div>
+
+        <!-- Tugma -->
+        <div class="mt-6">
+          <a
+            routerLink="/project"
+            class="inline-block bg-[#C4751A] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#a95f16] transition"
+          >
+            {{ slide.button }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+
+  </swiper-container>
+</div>
+
+</div>
+<section class="w-full bg-white pt-12 px-4 lg:px-20">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+    <!-- Chap taraf: Sarlavha -->
+    <div>
+      <span class="block text-sm text-[#D29F6E] font-semibold uppercase mb-2">Loyihalar</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Qurilgan va rejalashtirilgan obyektlar
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="w-full px-4 lg:px-20 py-12 bg-white">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Card 1: Tugallangan loyiha -->
+    <a
+      routerLink="/projects"
+      class="relative group h-[400px] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-center transition-transform duration-700 scale-100 group-hover:scale-105"
+        style="background-image: url('assets/image/slider_5.jpg')"
+      ></div>
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+        <h3 class="text-2xl font-bold mb-1">Boks mahorati maktabi</h3>
+        <p class="text-sm text-white/80">Toshkent
+          Yunusobod 9-chi</p>
+        <div class="text-3xl font-bold text-white/40 absolute top-6 right-6">01</div>
+      </div>
+    </a>
+
+    <!-- Card 2: Tez kunda -->
+    <div
+      class="relative group h-[400px] rounded-xl overflow-hidden shadow-md bg-cover bg-center"
+      style="background-image: url('assets/image/slider_3.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex items-center justify-center z-10">
+        <h3 class="text-2xl lg:text-3xl text-white font-semibold text-center">
+          Tez orada yangi loyiha<br />
+          <span class="text-sm font-normal opacity-70">Kuzatib boring...</span>
+        </h3>
+      </div>
+      <div class="text-3xl font-bold text-white/40 absolute top-6 right-6 z-10">02</div>
+    </div>
+  </div>
+</section>
+
+<section class="w-full bg-white py-16 px-4 lg:px-20">
+  <div class="max-w-7xl mx-auto">
+    <!-- Title -->
+    <div class="text-center mb-12">
+      <span class="text-sm uppercase text-[#D29F6E] font-semibold tracking-wide">Nega bizni tanlashadi?</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
+        Cosco Engineering afzalliklari
+      </h2>
+    </div>
+
+    <!-- Icon Boxes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- 1. Mustahkam infratuzilma -->
+      <div class="bg-white p-6 shadow hover:shadow-xl rounded-xl text-center transition">
+        <div class="text-4xl text-[#D29F6E] mb-4">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Mustahkam infratuzilma</h3>
+        <p class="text-gray-600 text-sm">
+          Qurilish maydonlarida zamonaviy texnologiyalar asosida barpo etilgan kuchli infratuzilma.
+        </p>
+      </div>
+
+      <!-- 2. Innovatsion dizayn -->
+      <div class="bg-white p-6 shadow hover:shadow-xl rounded-xl text-center transition">
+        <div class="text-4xl text-[#D29F6E] mb-4">
+          <i class="fas fa-drafting-compass"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Innovatsion dizayn</h3>
+        <p class="text-gray-600 text-sm">
+          Har bir loyiha zamonaviy arxitektura va ergonomik dizayn tamoyillariga asoslanadi.
+        </p>
+      </div>
+
+      <!-- 3. Tajribali mutaxassislar -->
+      <div class="bg-white p-6 shadow hover:shadow-xl rounded-xl text-center transition">
+        <div class="text-4xl text-[#D29F6E] mb-4">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Tajribali mutaxassislar</h3>
+        <p class="text-gray-600 text-sm">
+          Kompaniyamizda malakali muhandislar, loyihalovchilar va ustalar faoliyat yuritadi.
+        </p>
+      </div>
+
+      <!-- 4. Xavfsizlik standarti -->
+      <div class="bg-white p-6 shadow hover:shadow-xl rounded-xl text-center transition">
+        <div class="text-4xl text-[#D29F6E] mb-4">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Xavfsizlik standarti</h3>
+        <p class="text-gray-600 text-sm">
+          Qurilish jarayonida barcha xavfsizlik va mehnat muhofazasi standartlariga rioya qilinadi.
+        </p>
+      </div>
+
+      <!-- 5. Ekologik yechimlar -->
+      <div class="bg-white p-6 shadow hover:shadow-xl rounded-xl text-center transition">
+        <div class="text-4xl text-[#D29F6E] mb-4">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Ekologik yechimlar</h3>
+        <p class="text-gray-600 text-sm">
+          Loyihalar ekologik toza materiallar va yashil hududlarga eʼtibor bilan yaratiladi.
+        </p>
+      </div>
+
+      <!-- 6. Toʻliq xizmat ko‘rsatish -->
+      <div class="bg-white p-6 shadow hover:shadow-xl rounded-xl text-center transition">
+        <div class="text-4xl text-[#D29F6E] mb-4">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Toʻliq xizmatlar</h3>
+        <p class="text-gray-600 text-sm">
+          Loyiha tayyorlashdan tortib, foydalanishga topshirilgunga qadar barcha bosqichlar biz tomonidan amalga oshiriladi.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

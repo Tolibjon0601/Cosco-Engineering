@@ -1,0 +1,19 @@
+<!-- <div
+  *ngIf="showIntroVideo"
+  class="fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-700"
+>
+  <video
+    #introVideo
+    src="assets/video/video.mp4"
+    autoplay
+    [muted]="true"    playsinline
+    preload="auto"
+    (ended)="onVideoEnd()"
+    class="w-full h-full object-cover"
+  ></video>
+</div>
+
+<div *ngIf="!showIntroVideo">
+  <router-outlet></router-outlet>
+</div> -->
+<router-outlet></router-outlet>
