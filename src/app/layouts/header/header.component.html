@@ -79,10 +79,11 @@
     class="fixed inset-0 bg-black/60 z-[9999] flex justify-end"
     (click)="closeMenu()"
   >
-    <div
-      class="w-[80%] max-w-xs h-full bg-[#0A506D] text-white p-6 shadow-lg relative animate-slide-in-right"
-      (click)="$event.stopPropagation()"
-    >
+  <div
+  class="w-[80%] max-w-xs min-h-screen bg-[#C4751A] text-white p-6 shadow-lg relative animate-slide-in-right"
+  (click)="$event.stopPropagation()"
+>
+
       <button class="absolute top-4 right-4 text-2xl" (click)="closeMenu()">&times;</button>
 
       <nav class="flex flex-col gap-4 mt-12 text-lg font-semibold">
