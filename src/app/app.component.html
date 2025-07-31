@@ -1,19 +1,20 @@
-<!-- <div
-  *ngIf="showIntroVideo"
-  class="fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-700"
->
-  <video
-    #introVideo
-    src="assets/video/video.mp4"
-    autoplay
-    [muted]="true"    playsinline
-    preload="auto"
-    (ended)="onVideoEnd()"
-    class="w-full h-full object-cover"
-  ></video>
+<!-- Loading Spinner -->
+<div *ngIf="loading" class="fixed inset-0 z-[9999] bg-gray-900 flex items-center justify-center">
+  <div class="flex flex-col items-center">
+    <img 
+      src="assets/image/logo.png" 
+      alt="Cosco Engineering" 
+      class="w-32 h-32 object-contain spinner mb-4"
+    />
+    <div class="flex space-x-1">
+      <div class="w-2 h-2 bg-[#C4751A] rounded-full animate-bounce" style="animation-delay: 0s"></div>
+      <div class="w-2 h-2 bg-[#C4751A] rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+      <div class="w-2 h-2 bg-[#C4751A] rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+    </div>
+  </div>
 </div>
 
-<div *ngIf="!showIntroVideo">
+<!-- Main Content -->
+<div [class.opacity-0]="loading" class="transition-opacity duration-500">
   <router-outlet></router-outlet>
-</div> -->
-<router-outlet></router-outlet>
+</div>

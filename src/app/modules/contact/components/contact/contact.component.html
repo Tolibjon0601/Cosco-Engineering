@@ -1,90 +1,299 @@
-<!-- Page Title Section -->
-<div
-  class="relative w-full h-[60vh] bg-cover bg-center"
-  style="background-image: url('assets/image/page-title-bg.jpg');"
->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#3a3a3a]/60 to-[#1d1d1d]/60"></div>
+<!-- Hero Section -->
+<div class="relative w-full h-[70vh] bg-cover bg-center bg-fixed" style="background-image: url('assets/image/page-title-bg.jpg');">
+  <!-- Modern Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
 
-  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Biz bilan bog'laning</h1>
-    <div class="flex items-center gap-2 text-sm text-gray-300">
-      <a routerLink="/" class="hover:underline text-[#C4751A] font-bold text-xl">Bosh sahifa</a>
-      <span>/</span>
-      <span class="text-white">Aloqa</span>
+  <!-- Content -->
+  <div class="relative z-10 h-full flex items-center">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <div class="max-w-3xl animate-fadeIn">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slideInLeft">
+          Biz bilan bog'laning
+        </h1>
+        <p class="text-xl text-white/80 mb-8 animate-slideInLeft" style="animation-delay: 0.2s">
+          Loyihangizni muhokama qilish uchun biz bilan bog'laning
+        </p>
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-3 text-white/60 animate-slideInLeft" style="animation-delay: 0.4s">
+          <a routerLink="/" class="hover:text-[#C4751A] transition-colors duration-300">
+            <i class="fas fa-home"></i>
+          </a>
+          <span>/</span>
+          <span class="text-white">Aloqa</span>
+        </nav>
+      </div>
     </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
   </div>
 </div>
 
-<!-- Contact Form Section -->
-<section
-  class="relative py-20 px-4 bg-cover bg-center"
-  style="background-image: url('assets/image/slider_3.jpg');"
->
-  <div class="absolute inset-0 bg-gradient-to-tr from-[#D2B48C]/90 to-[#5C4033]/85 z-0"></div>
+<!-- Contact Section -->
+<section class="section-padding bg-gray-50">
+  <div class="container mx-auto px-6 md:px-12 lg:px-20">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-  <div class="relative z-10 max-w-2xl mx-auto">
-    <div class="bg-white/90 shadow-xl rounded-xl p-8 lg:p-10 backdrop-blur-sm border border-[#E6D3BD]">
-      <form
-        action="https://formsubmit.io/send/your-email@example.com"
-        method="POST"
-        class="space-y-6"
-      >
-        <input type="text" name="_formsubmit_id" style="display:none" />
-        <input type="hidden" name="_redirect" value="https://coscoengineering.uz/success" />
+      <!-- Contact Info -->
+      <div class="lg:col-span-1 space-y-8">
+        <!-- Section Header -->
+        <div class="animate-fadeIn">
+          <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
+            Aloqa ma'lumotlari
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Biz bilan bog'laning
+          </h2>
+          <p class="text-gray-600">
+            Sizning loyihangiz haqida ko'proq ma'lumot olish uchun biz bilan bog'laning.
+          </p>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-sm font-medium text-gray-700">Ism</label>
-            <input
-              type="text"
-              name="Ism"
-              placeholder="Ismingiz"
-              required
-              class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
-            />
+        <!-- Contact Cards -->
+        <div class="space-y-6">
+          <!-- Phone -->
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover animate-fadeIn">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-[#C4751A]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone text-[#C4751A] text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Telefon</h3>
+                <a href="tel:+998712558822" class="text-gray-600 hover:text-[#C4751A] transition-colors">
+                  +998 (71) 255-88-22
+                </a>
+              </div>
+            </div>
           </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700">Telefon</label>
-            <input
-              type="tel"
-              name="Telefon"
-              placeholder="+998 __ ___ __ __"
-              required
-              class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
-            />
+
+          <!-- Email -->
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover animate-fadeIn" style="animation-delay: 0.1s">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-[#C4751A]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-[#C4751A] text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Email</h3>
+                <a href="mailto:support@coscoengineering.uz" class="text-gray-600 hover:text-[#C4751A] transition-colors">
+                  {{email}}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover animate-fadeIn" style="animation-delay: 0.2s">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-[#C4751A]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-[#C4751A] text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Manzil</h3>
+                <p class="text-gray-600">
+                  Toshkent shahar, Mirobod tumani<br>
+                  Mironshoh 6-boshiberk ko'cha, 18/141-uy
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover animate-fadeIn" style="animation-delay: 0.3s">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-[#C4751A]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-clock text-[#C4751A] text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Ish vaqti</h3>
+                <p class="text-gray-600">
+                  Dushanba - Juma: 9:00 - 18:00<br>
+                  Shanba: 9:00 - 15:00
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700">Email</label>
-          <input
-            type="email"
-            name="Email"
-            placeholder="Email (ixtiyoriy)"
-            class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
-          />
+        <!-- Social Links -->
+        <div class="pt-6">
+          <p class="text-gray-700 font-semibold mb-4">Ijtimoiy tarmoqlar:</p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-[#C4751A] hover:text-white transition-all duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-[#C4751A] hover:text-white transition-all duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-[#C4751A] hover:text-white transition-all duration-300">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-[#C4751A] hover:text-white transition-all duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700">Xabar</label>
-          <textarea
-            name="Xabar"
-            rows="5"
-            placeholder="Xabaringizni yozing"
-            required
-            class="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#5C4033] focus:border-[#5C4033]"
-          ></textarea>
-        </div>
+      <!-- Contact Form -->
+      <div class="lg:col-span-2 animate-fadeIn">
+        <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+          <h3 class="text-2xl font-bold text-gray-900 mb-8">Xabar yuborish</h3>
 
-        <div class="text-center lg:text-right">
-          <button
-            type="submit"
-            class="bg-[#5C4033] text-white px-6 py-2 rounded-md hover:bg-[#3D2A1D] transition-all font-semibold shadow-md"
+          <form
+            action="https://formsubmit.io/send/support@coscoengineering.uz"
+            method="POST"
+            class="space-y-6"
           >
-            Yuborish
-          </button>
+            <input type="text" name="_formsubmit_id" style="display:none" />
+            <input type="hidden" name="_redirect" value="https://coscoengineering.uz/success" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Name -->
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Ism <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="Ism"
+                  placeholder="Ismingizni kiriting"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C4751A] focus:border-transparent transition-all duration-300"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Telefon <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="tel"
+                  name="Telefon"
+                  placeholder="+998 __ ___ __ __"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C4751A] focus:border-transparent transition-all duration-300"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                name="Email"
+                placeholder="email@example.com"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C4751A] focus:border-transparent transition-all duration-300"
+              />
+            </div>
+
+            <!-- Subject -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">
+                Mavzu
+              </label>
+              <select
+                name="Mavzu"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C4751A] focus:border-transparent transition-all duration-300"
+              >
+                <option value="">Mavzuni tanlang</option>
+                <option value="Qurilish">Qurilish xizmatlari</option>
+                <option value="Loyihalash">Loyihalash</option>
+                <option value="Konsalting">Konsalting</option>
+                <option value="Boshqa">Boshqa</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">
+                Xabar <span class="text-red-500">*</span>
+              </label>
+              <textarea
+                name="Xabar"
+                rows="6"
+                placeholder="Xabaringizni yozing..."
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C4751A] focus:border-transparent transition-all duration-300 resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-4">
+              <button
+                type="submit"
+                class="w-full md:w-auto btn-primary px-8 py-3 text-lg"
+              >
+                <span>Xabar yuborish</span>
+                <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6 md:px-12 lg:px-20">
+    <!-- Section Header -->
+    <div class="text-center mb-12 animate-fadeIn">
+      <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
+        Bizning manzil
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Ofisimizga tashrif buyuring
+      </h2>
+      <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
+    </div>
+
+    <!-- Map Container -->
+    <div class="rounded-2xl overflow-hidden shadow-2xl animate-fadeIn">
+      <iframe
+        src="https://maps.google.com/maps?q=41.286597,69.272444&ll=41.286597,69.272444&z=16&output=embed"
+        class="w-full h-[500px] border-0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="relative py-24 bg-cover bg-center bg-fixed" style="background-image: url('assets/image/slider_1.jpg')">
+  <div class="absolute inset-0 bg-black/70"></div>
+  <div class="relative z-10 container mx-auto px-6 md:px-12 lg:px-20 text-center">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-fadeIn">
+      Loyihangizni bugun boshlang
+    </h2>
+    <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.2s">
+      Professional maslahat va sifatli xizmat uchun biz bilan bog'laning
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn" style="animation-delay: 0.4s">
+      <a
+        href="tel:+998712558822"
+        class="btn-primary inline-flex items-center justify-center gap-2 group text-lg"
+      >
+        <i class="fas fa-phone"></i>
+        <span>Qo'ng'iroq qiling</span>
+      </a>
+      <a
+        href="mailto:support@coscoengineering.uz"
+        class="btn-secondary inline-flex items-center justify-center gap-2 group text-lg"
+      >
+        <i class="fas fa-envelope"></i>
+        <span>Email yuborish</span>
+      </a>
     </div>
   </div>
 </section>

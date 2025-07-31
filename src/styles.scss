@@ -1,13 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* gorizontal oq joyni yo‘q qiladi */
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4751A;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a05d14;
+}
+
+/* Loading Spinner Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 2s linear infinite;
+}
+
+/* Modern Button Styles */
+.btn-primary {
+  @apply bg-[#C4751A] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-[#a05d14] hover:shadow-lg transform hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-[#C4751A] text-[#C4751A] px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-[#C4751A] hover:text-white;
+}
+
+/* Section Spacing */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #C4751A 0%, #e89234 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card Hover Effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+}
+
+/* Overlay Effects */
+.overlay-gradient {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Swiper Customization */
 .swiper-button-prev,
 .swiper-button-next {
   display: none !important;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #C4751A;
+  opacity: 1;
+  width: 30px;
+  border-radius: 5px;
 }

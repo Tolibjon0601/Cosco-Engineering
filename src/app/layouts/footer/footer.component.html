@@ -1,51 +1,184 @@
-<footer class="relative py-20 px-4 bg-cover bg-center text-white"  style="background-image: url('assets/image/slider_2.jpg');">
-
-  <!-- Gradient Overlay -->
-  <div class="absolute inset-0  z-0 bg-gradient-to-tr  from-[#D2B48C]/90 to-[#5C4033]/80"></div>
-
-  <!-- Content -->
-  <div class="relative z-10 max-w-7xl mx-auto px-4 py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
-
-      <!-- Contact -->
-      <div>
-        <img src="assets/image/logo.png" alt="Logo" class="h-20 mb-4" />
-        <h2 class="text-xl font-bold mb-3">Aloqa</h2>
-        <p class="text-sm uppercase mb-1">Telefon</p>
-        <a href="tel:+99871 255-88-22 " class="block text-lg font-semibold hover:text-[#C4751A]">
-          +998 (71) 255-88-22
-        </a>
-        <p class="mt-4 text-sm leading-relaxed">
-          Toshkent shahar, Mirobod tumani <br> Mironshoh 6-boshiberk ko’cha, 18/141-uy        </p>
-      </div>
-
-      <!-- Email -->
-      <div>
-        <h2 class="text-xl font-bold mb-3">Pochta manzil</h2>
-        <a [href]="'mailto:' + email" class="text-lg font-semibold mb-4 block">{{ email }}</a>
-        <div class="flex space-x-4 text-xl mt-4">
-          <a href="#" class="hover:text-[#C4751A]"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" class="hover:text-[#C4751A]"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank" class="hover:text-[#C4751A]"><i class="fab fa-telegram"></i></a>
+<!-- Modern Footer -->
+<footer class="relative bg-gray-900 text-white">
+  <!-- Main Footer Content -->
+  <div class="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      
+      <!-- Company Info -->
+      <div class="space-y-6">
+        <div>
+          <img 
+            src="assets/image/logo.png" 
+            alt="Cosco Engineering" 
+            class="h-16 mb-6"
+          />
+          <p class="text-gray-400 leading-relaxed">
+            Cosco Engineering — zamonaviy qurilish va muhandislik yechimlari kompaniyasi. Biz sifat va ishonchni birinchi o'ringa qo'yamiz.
+          </p>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="flex space-x-4">
+          <a 
+            href="#" 
+            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
+          >
+            <i class="fab fa-facebook-f text-white group-hover:text-white"></i>
+          </a>
+          <a 
+            href="#" 
+            target="_blank"
+            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
+          >
+            <i class="fab fa-instagram text-white group-hover:text-white"></i>
+          </a>
+          <a 
+            href="#" 
+            target="_blank"
+            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
+          >
+            <i class="fab fa-telegram text-white group-hover:text-white"></i>
+          </a>
+          <a 
+            href="#" 
+            target="_blank"
+            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
+          >
+            <i class="fab fa-linkedin-in text-white group-hover:text-white"></i>
+          </a>
         </div>
       </div>
-
+      
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-bold mb-6 text-white">Tez havolalar</h3>
+        <ul class="space-y-3">
+          <li>
+            <a 
+              routerLink="/home" 
+              class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
+            >
+              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <span>Bosh sahifa</span>
+            </a>
+          </li>
+          <li>
+            <a 
+              routerLink="/about" 
+              class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
+            >
+              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <span>Kompaniya haqida</span>
+            </a>
+          </li>
+          <li>
+            <a 
+              routerLink="/project" 
+              class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
+            >
+              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <span>Loyihalar</span>
+            </a>
+          </li>
+          <li>
+            <a 
+              routerLink="/contact" 
+              class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
+            >
+              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <span>Aloqa</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-xl font-bold mb-6 text-white">Aloqa ma'lumotlari</h3>
+        <div class="space-y-4">
+          <!-- Phone -->
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-phone text-[#C4751A]"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-400 mb-1">Telefon</p>
+              <a 
+                href="tel:+998712558822" 
+                class="text-white hover:text-[#C4751A] transition-colors duration-300"
+              >
+                +998 (71) 255-88-22
+              </a>
+            </div>
+          </div>
+          
+          <!-- Email -->
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-envelope text-[#C4751A]"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-400 mb-1">Email</p>
+              <a 
+                [href]="'mailto:' + email" 
+                class="text-white hover:text-[#C4751A] transition-colors duration-300"
+              >
+                {{ email }}
+              </a>
+            </div>
+          </div>
+          
+          <!-- Address -->
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-map-marker-alt text-[#C4751A]"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-400 mb-1">Manzil</p>
+              <p class="text-white">
+                Toshkent shahar, Mirobod tumani<br>
+                Mironshoh 6-boshiberk ko'cha, 18/141-uy
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <!-- Map -->
-      <div class="lg:col-span-2">
-        <div class="w-full h-64 md:h-80 rounded-xl shadow-lg overflow-hidden">
-          <div id="yandex-map" class="w-full h-full rounded-xl"></div>
+      <div>
+        <h3 class="text-xl font-bold mb-6 text-white">Bizning manzil</h3>
+        <div class="w-full h-64 rounded-xl shadow-2xl overflow-hidden">
+          <div id="yandex-map" class="w-full h-full"></div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Bottom Strip -->
-  <div class="relative z-10 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300 gap-2 text-center">
-      <p>© {{ currentYear }} – BARCHA HUQUQLAR HIMOYALANGAN</p>
-      <p>
-        Sayt <a href="https://isbd.uz/" target="_blank" class="text-white font-semibold hover:text-[#C4751A]">SBD</a> tomonidan ishlab chiqilgan
-      </p>
+  
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-800">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <p>© {{ currentYear }} Cosco Engineering. Barcha huquqlar himoyalangan.</p>
+        <div class="flex items-center gap-2">
+          <span>Sayt yaratildi:</span>
+          <a 
+            href="https://isbd.uz/" 
+            target="_blank" 
+            class="text-[#C4751A] font-semibold hover:text-white transition-colors duration-300"
+          >
+            SBD
+          </a>
+        </div>
+      </div>
     </div>
   </div>
+  
+  <!-- Back to Top Button -->
+  <button 
+    *ngIf="showBackToTop"
+    (click)="scrollToTop()"
+    class="fixed bottom-8 right-8 w-12 h-12 bg-[#C4751A] text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#a05d14] transition-all duration-300 z-50 animate-fadeIn"
+  >
+    <i class="fas fa-arrow-up"></i>
+  </button>
 </footer>

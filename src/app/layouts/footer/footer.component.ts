@@ -1,15 +1,16 @@
 import { Component ,HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 declare const ymaps: any;
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent  implements OnInit {
-  showScrollButton = false;
+  showBackToTop = false;
   currentYear: number = new Date().getFullYear();
 
   coords: number[] = [41.291697, 69.208481]; // Yangi koordinata
@@ -21,7 +22,7 @@ export class FooterComponent  implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.showScrollButton = window.pageYOffset > 300;
+    this.showBackToTop = window.pageYOffset > 300;
   }
 
   scrollToTop(): void {

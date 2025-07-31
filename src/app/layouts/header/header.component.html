@@ -1,113 +1,168 @@
 <header
   [ngClass]="{
     'bg-transparent': !isScrolled,
-    'bg-black/40 shadow-md backdrop-blur-md': isScrolled
+    'bg-gray-900/95 shadow-2xl backdrop-blur-xl': isScrolled
   }"
-
-
-  class="fixed top-0 left-0 z-50 w-full transition-all duration-400 py-2 px-5 flex items-center justify-between text-white"
+  class="fixed top-0 left-0 z-50 w-full transition-all duration-500 py-4 px-6 md:px-12 lg:px-20"
 >
-  <!-- Logo -->
-  <div>
-    <img src="../../../assets/image/logo.png" alt="logo" class="h-10 sm:h-20" />
-  </div>
-
-  <!-- Desktop Menu -->
-  <nav class="hidden lg:flex items-center gap-8 text-lg font-semibold">
-    <a
-      routerLink="/home"
-      routerLinkActive="text-[#C4751A] font-bold"
-      [routerLinkActiveOptions]="{ exact: true }"
-      class="hover:text-[#C4751A] transition"
-      >{{ 'nav.main' | translate }}</a
-    >
-    <a
-      routerLink="/about"
-      routerLinkActive="text-[#C4751A] font-bold "
-      class="hover:text-[#C4751A] transition"
-      >{{ 'nav.about' | translate }}</a
-    >
-    <a
-    routerLink="/project"
-    routerLinkActive="text-[#C4751A] font-bold"
-    class="hover:text-[#C4751A] transition"
-    >{{ 'nav.projects' | translate }}</a
-  >
-    <a
-      routerLink="/contact"
-      routerLinkActive="text-[#C4751A] font-bold"
-      class="hover:text-[#C4751A] transition"
-      >{{ 'nav.contact' | translate }}</a
-    >
-
-    <div class="relative hidden lg:block">
-      <button
-        class="flex items-center gap-2   px-3 py-1 rounded cursor-pointer"
-        (click)="toggleDropdown()"
-      >
-        <img [src]="selectedFlag" alt="flag" class="h-4" />
-        <span>{{ getLangName(selectedLang) }}</span>
-      </button>
-      <ul
-        *ngIf="dropdownOpen"
-        class="absolute right-0 mt-2 w-40 bg-white text-black shadow-md rounded z-50 overflow-hidden"
-      >
-        <li
-          *ngFor="let lang of languages"
-          (click)="selectLanguage(lang)"
-          [class.bg-gray-200]="lang.code === selectedLang"
-          class="px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer"
-        >
-          <img [src]="lang.flag" alt="{{ lang.name }}" class="h-4" />
-          {{ lang.name }}
-        </li>
-      </ul>
+  <div class="flex items-center justify-between w-full">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img
+        src="../../../assets/image/logo.png"
+        alt="Cosco Engineering"
+        class="h-12 sm:h-16 lg:h-20 transition-all duration-300 hover:scale-105"
+      />
     </div>
-  </nav>
 
-  <!-- Language Dropdown (Desktop Only) -->
+    <!-- Desktop Menu -->
+    <nav class="hidden lg:flex items-center gap-10">
+      <a
+        routerLink="/home"
+        routerLinkActive="text-[#C4751A] after:w-full"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="relative text-white text-lg font-medium transition-all duration-300 hover:text-[#C4751A] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#C4751A] after:transition-all after:duration-300 hover:after:w-full"
+      >{{ 'nav.main' | translate }}</a>
+      <a
+        routerLink="/about"
+        routerLinkActive="text-[#C4751A] after:w-full"
+        class="relative text-white text-lg font-medium transition-all duration-300 hover:text-[#C4751A] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#C4751A] after:transition-all after:duration-300 hover:after:w-full"
+      >{{ 'nav.about' | translate }}</a>
+      <a
+        routerLink="/project"
+        routerLinkActive="text-[#C4751A] after:w-full"
+        class="relative text-white text-lg font-medium transition-all duration-300 hover:text-[#C4751A] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#C4751A] after:transition-all after:duration-300 hover:after:w-full"
+      >{{ 'nav.projects' | translate }}</a>
+      <a
+        routerLink="/contact"
+        routerLinkActive="text-[#C4751A] after:w-full"
+        class="relative text-white text-lg font-medium transition-all duration-300 hover:text-[#C4751A] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#C4751A] after:transition-all after:duration-300 hover:after:w-full"
+      >{{ 'nav.contact' | translate }}</a>
 
-
-  <!-- Mobile Menu Button -->
-  <button (click)="toggleMenu()" class="lg:hidden text-2xl">
-    <i class="fas fa-bars"></i>
-  </button>
-
-  <!-- Mobile Sidebar -->
-  <div
-    *ngIf="visible"
-    class="fixed inset-0 bg-black/60 z-[9999] flex justify-end"
-    (click)="closeMenu()"
-  >
-  <div
-  class="w-[80%] max-w-xs min-h-screen bg-[#C4751A] text-white p-6 shadow-lg relative animate-slide-in-right"
-  (click)="$event.stopPropagation()"
->
-
-      <button class="absolute top-4 right-4 text-2xl" (click)="closeMenu()">&times;</button>
-
-      <nav class="flex flex-col gap-4 mt-12 text-lg font-semibold">
-        <a routerLink="/home" (click)="closeMenu()" class="hover:text-blue-300">Asosiy</a>
-        <a routerLink="/about" (click)="closeMenu()" class="hover:text-blue-300">Kompaniya haqida</a>
-        <a routerLink="/project" (click)="closeMenu()" class="hover:text-blue-300">Loyihalar</a>
-        <a routerLink="/contact" (click)="closeMenu()" class="hover:text-blue-300">Aloqa</a>
-      </nav>
-      <div class="relative mt-2">
+      <!-- Language Dropdown -->
+      <div class="relative">
+        <button
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
+          (click)="toggleDropdown()"
+        >
+          <img [src]="selectedFlag" alt="flag" class="h-5 w-7 object-cover rounded" />
+          <span class="text-white font-medium">{{ getLangName(selectedLang) }}</span>
+          <svg class="w-4 h-4 text-white transition-transform duration-300" [class.rotate-180]="dropdownOpen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
         <ul
-          class="absolute  mt-2 w-max flex flex-row items-center gap-2 bg-white text-black shadow-md rounded z-50 overflow-hidden"
+          *ngIf="dropdownOpen"
+          class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-2xl overflow-hidden animate-fadeIn"
         >
           <li
             *ngFor="let lang of languages"
             (click)="selectLanguage(lang)"
-            [class.bg-blue-200]="lang.code === selectedLang"
-            class="px-2 py-1 hover:bg-blue-400 flex items-center gap-1 cursor-pointer"
+            [class.bg-gray-100]="lang.code === selectedLang"
+            class="px-4 py-3 hover:bg-gray-50 flex items-center gap-3 cursor-pointer transition-colors duration-200"
           >
-            <img [src]="lang.flag" alt="{{ lang.name }}" class="h-4" />
-            {{ lang.name }}
+            <img [src]="lang.flag" alt="{{ lang.name }}" class="h-5 w-7 object-cover rounded" />
+            <span class="text-gray-800 font-medium">{{ lang.name }}</span>
           </li>
         </ul>
       </div>
+    </nav>
 
+    <!-- Mobile Menu Button -->
+    <button
+      (click)="toggleMenu()"
+      class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300"
+    >
+      <svg *ngIf="!visible" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg *ngIf="visible" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Sidebar -->
+  <div
+    *ngIf="visible"
+    class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] flex justify-end animate-fadeIn"
+    (click)="closeMenu()"
+  >
+    <div
+      class="w-[85%] max-w-sm min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 shadow-2xl relative animate-slideInRight"
+      (click)="$event.stopPropagation()"
+    >
+
+      <!-- Close Button -->
+      <button
+        class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+        (click)="closeMenu()"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile Logo -->
+      <div class="mb-8 mt-4">
+        <img
+          src="../../../assets/image/logo.png"
+          alt="Cosco Engineering"
+          class="h-16 w-auto"
+        />
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav class="flex flex-col gap-2">
+        <a
+          routerLink="/home"
+          routerLinkActive="bg-[#C4751A] text-white"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+          class="px-4 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-white/10"
+        >{{ 'nav.main' | translate }}</a>
+        <a
+          routerLink="/about"
+          routerLinkActive="bg-[#C4751A] text-white"
+          (click)="closeMenu()"
+          class="px-4 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-white/10"
+        >{{ 'nav.about' | translate }}</a>
+        <a
+          routerLink="/project"
+          routerLinkActive="bg-[#C4751A] text-white"
+          (click)="closeMenu()"
+          class="px-4 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-white/10"
+        >{{ 'nav.projects' | translate }}</a>
+        <a
+          routerLink="/contact"
+          routerLinkActive="bg-[#C4751A] text-white"
+          (click)="closeMenu()"
+          class="px-4 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-white/10"
+        >{{ 'nav.contact' | translate }}</a>
+      </nav>
+      <!-- Mobile Language Selector -->
+      <div class="mt-8 pt-8 border-t border-white/20">
+        <p class="text-sm text-gray-400 mb-3">{{ 'nav.language' | translate }}</p>
+        <div class="flex flex-wrap gap-2">
+          <button
+            *ngFor="let lang of languages"
+            (click)="selectLanguage(lang); closeMenu()"
+            [class.bg-[#C4751A]]="lang.code === selectedLang"
+            [class.bg-white-10]="lang.code !== selectedLang"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[#C4751A]"
+          >
+            <img [src]="lang.flag" alt="{{ lang.name }}" class="h-5 w-7 object-cover rounded" />
+            <span class="font-medium">{{ lang.name }}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Footer -->
+      <div class="absolute bottom-8 left-8 right-8">
+        <p class="text-sm text-gray-400 text-center">
+          © 2024 Cosco Engineering. All rights reserved.
+        </p>
+      </div>
     </div>
   </div>
 </header>
