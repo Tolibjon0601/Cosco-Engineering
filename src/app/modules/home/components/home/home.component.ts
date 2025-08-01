@@ -12,7 +12,12 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent  implements AfterViewInit {
   slides = [
     {
-      title: 'Sifatli qurilish — barqaror kelajak! Cosco Engineering bilan orzularingizdagi binoni yarating.',
+      title: 'Yirik inshootlardan tortib, uy-joygacha — har bir loyiha biz uchun muhim.',
+      button: 'Batafsil maʼlumot',
+      image: 'assets/image/slider_3.jpg'
+    },
+    {
+      title: 'Cosco Engineering bilan orzularingizdagi binoni yarating.',
       button: 'Batafsil maʼlumot',
       image: 'assets/image/slider_1.jpg'
     },
@@ -21,11 +26,7 @@ export class HomeComponent  implements AfterViewInit {
       button: 'Batafsil maʼlumot',
       image: 'assets/image/slider_2.jpg'
     },
-    {
-      title: 'Yirik inshootlardan tortib, uy-joygacha — har bir loyiha biz uchun muhim.',
-      button: 'Batafsil maʼlumot',
-      image: 'assets/image/slider_3.jpg'
-    },
+
 
   ];
 
