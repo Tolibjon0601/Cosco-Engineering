@@ -4,5 +4,363 @@
     "about": "Biz haqimizda",
     "contact": "Aloqa",
     "projects": "Loyihalar"
+  },
+  "slider": {
+    "title1": "Yirik inshootlardan tortib, uy-joygacha — har bir loyiha biz uchun muhim.",
+    "title2": "Cosco Engineering bilan orzularingizdagi binoni yarating.",
+    "title3": "Bizni tanlang – muhandislik, innovatsiya va tajriba bir joyda jam!",
+    "button": "Batafsil maʼlumot"
+  },
+  "about": {
+    "subtitle": "Biz haqimizda",
+    "title": "Zamonaviy qurilishning yangi standarti",
+    "description": {
+      "heading": "Cosco Engineering — bu zamonaviy texnologiyalar, sifatli injiniring va ishonchli qurilishning uyg'unlashuvi",
+      "p1": "Kompaniyamiz muhandislikdan tortib to to'liq qurilish yakunigacha bo'lgan barcha bosqichlarni amalga oshiradi. Har bir loyiha — bu biz uchun mas'uliyat va ishonch ramzi.",
+      "p2": "Biz yirik sanoat inshootlari, turar-joy majmualari va tijorat binolarini loyihalashtirib, sifatli tarzda hayotga tatbiq etamiz. Texnik jihatdan mukammallik, ekologik xavfsizlik va iqtisodiy samaradorlik — asosiy ustuvorliklarimizdir.",
+      "button": "Batafsil",
+      "features": {
+        "1": {
+          "title": "Yirik loyihalar",
+          "desc": "Cosco Engineering O'zbekiston bo'ylab ko'plab yirik infratuzilma va turar-joy loyihalarini muvaffaqiyatli amalga oshirib kelmoqda."
+        },
+        "2": {
+          "title": "Innovatsion yondashuv",
+          "desc": "Har bir qurilishda zamonaviy texnologiyalar va ilg'or injiniring yechimlaridan foydalanamiz. Bu bizni farqlab turadi."
+        },
+        "3": {
+          "title": "Ishonchli hamkorlik",
+          "desc": "Davlat va xususiy sektor bilan hamkorlikda bir qancha muvaffaqiyatli loyihalarni amalga oshirdik. Bizga ishonishadi — chunki natija bor."
+        }
+      }
+    },
+    "stats": {
+      "experience": "Yillik tajriba",
+      "projects": "Tugallangan loyihalar",
+      "team": "Professional jamoa",
+      "satisfaction": "Mijoz mamnuniyati"
+    },
+    "features": {
+      "1": {
+        "title": "Yirik loyihalar",
+        "desc": "Cosco Engineering O'zbekiston bo'ylab ko'plab yirik infratuzilma va turar-joy loyihalarini muvaffaqiyatli amalga oshirib kelmoqda."
+      },
+      "2": {
+        "title": "Innovatsion yondashuv",
+        "desc": "Har bir qurilishda zamonaviy texnologiyalar va ilg'or injiniring yechimlaridan foydalanamiz. Bu bizni farqlab turadi."
+      },
+      "3": {
+        "title": "Ishonchli hamkorlik",
+        "desc": "Davlat va xususiy sektor bilan hamkorlikda bir qancha muvaffaqiyatli loyihalarni amalga oshirdik. Bizga ishonishadi — chunki natija bor."
+      }
+    },
+    "button": "Batafsil"
+  },
+
+  "projects": {
+    "hero": {
+      "title": "Bizning loyihalar",
+      "description": "Muvaffaqiyatli amalga oshirilgan va joriy loyihalarimiz",
+      "breadcrumb": "Loyihalar"
+    },
+    "sectionLabel": "Loyihamiz haqida",
+    "button": "Batafsil",
+    "slides": [
+      {
+        "stats": "TDP Universiteti",
+        "description": "Toshkent viloyati Chirchiq davlat pedagogika universitetining zamonaviy kampusi zamonaviy ta’lim standartlariga mos holda qurildi."
+      },
+      {
+        "stats": "Boks maktabi",
+        "description": "Yosh sportchilarning salohiyatini rivojlantirish uchun barcha sharoitlarga ega bo‘lgan zamonaviy Boks mahorat maktabi qurib bitkazildi."
+      },
+      {
+        "stats": "QarDU binosi",
+        "description": "Qarshi davlat universitetining yangi binosi — fan, innovatsiya va zamonaviy muhitni uyg‘unlashtirgan arxitekturaviy yechim."
+      }
+    ],
+    "sectionTag": "Loyihalar",
+    "sectionTitle": "Qurilgan va rejalashtirilgan obyektlar",
+    "allProjects": "Barcha loyihalar",
+    "details": "Batafsil ko'rish",
+    "project1": {
+      "status": "Tugallangan loyiha",
+      "title": "Boks mahorati maktabi",
+      "location": "Toshkent, Yunusobod 9-chi"
+    },
+    "comingSoon": {
+      "title": "Tez orada yangi loyiha",
+      "subtitle": "Kuzatib boring..."
+    }
   }
+,
+"why": {
+  "titleTag": "Nega bizni tanlashadi?",
+  "title": "Cosco Engineering afzalliklari",
+  "feature1": {
+    "title": "Mustahkam infratuzilma",
+    "desc": "Qurilish maydonlarida zamonaviy texnologiyalar asosida barpo etilgan kuchli infratuzilma."
+  },
+  "feature2": {
+    "title": "Innovatsion dizayn",
+    "desc": "Har bir loyiha zamonaviy arxitektura va ergonomik dizayn tamoyillariga asoslanadi."
+  },
+  "feature3": {
+    "title": "Tajribali mutaxassislar",
+    "desc": "Kompaniyamizda malakali muhandislar, loyihalovchilar va ustalar faoliyat yuritadi."
+  },
+  "feature4": {
+    "title": "Xavfsizlik standarti",
+    "desc": "Qurilish jarayonida barcha xavfsizlik va mehnat muhofazasi standartlariga rioya qilinadi."
+  },
+  "feature5": {
+    "title": "Ekologik yechimlar",
+    "desc": "Loyihalar ekologik toza materiallar va yashil hududlarga eʼtibor bilan yaratiladi."
+  },
+  "feature6": {
+    "title": "Toʻliq xizmatlar",
+    "desc": "Loyiha tayyorlashdan tortib, foydalanishga topshirilgunga qadar barcha bosqichlar biz tomonidan amalga oshiriladi."
+  }
+},
+"cta": {
+  "title": "Loyihangizni biz bilan amalga oshiring",
+  "subtitle": "Professional jamoa, zamonaviy yechimlar va kafolatlangan sifat",
+  "button": "Bog'lanish"
+},
+"aboutUs": {
+  "title": "Biz haqimizda",
+  "subtitle": "Zamonaviy qurilish va muhandislik yechimlarining ishonchli hamkoringiz",
+  "breadcrumb": {
+    "home": "Bosh sahifa",
+    "current": "Biz haqimizda"
+  }
+},
+"company": {
+  "historyLabel": "Kompaniya tarixi",
+  "summaryTitle": "COSCO ENGINEERING haqida qisqacha",
+  "paragraphs": [
+    "COSCO ENGINEERING — bu O'zbekistonda zamonaviy qurilish, loyihalash va muhandislik xizmatlarini taqdim etuvchi ishonchli kompaniya.",
+    "2017-yildan beri biz turli darajadagi infratuzilma obyektlari, davlat va xususiy sektor uchun qurilish loyihalarini sifatli amalga oshirib kelmoqdamiz.",
+    "Ko'p yillik tajriba, malakali mutaxassislar va ilg'or texnologiyalar asosida Cosco Engineering muhandislik, loyiha boshqaruvi va qurilishda yuqori standartlarga amal qiladi. Bizning yondashuv – har bir loyiha uchun kompleks va barqaror yechim taklif qilishdir.",
+    "Bugungi kunda COSCO ENGINEERING respublikamizda o'zini ishonchli va mas'uliyatli hamkor sifatida namoyon etib, texnik imkoniyatlari va sifatga sadoqati bilan ajralib turadi.",
+    "Biz innovatsion yondashuv, xavfsizlik va samaradorlikka ustuvorlik beramiz. Mijozlarimiz ehtiyojlariga mos yechimlar taqdim etish — bizning asosiy vazifamizdir."
+  ]
+},
+"stats": {
+  "experience": "Yillik tajriba",
+  "projects": "Tugallangan loyihalar",
+  "team": "Professional jamoa",
+  "satisfaction": "Mijoz mamnuniyati"
+},
+"featuredProject": {
+  "tag": "Muhim loyiha",
+  "title": "Sport va sog'lom turmush sari ishonchli qadam",
+  "description": "Cosco Engineering tomonidan loyihalashtirilgan va qurilgan Boks mahorat maktabi – bu professional sportchilar va yosh avlod uchun zamonaviy, xavfsiz va qulay sport inshootidir.",
+  "projectTitle": "Boks mahorat maktabi",
+  "projectDescription": "Ushbu maktab zamonaviy sport inshooti sifatida barcha xalqaro standartlarga javob beradi. Binoda professional boks zallari, mashg'ulot maydonchalari, zamonaviy kiyinish xonalari va tibbiy xizmat xonasi mavjud. Qurilishda xavfsizlik, shamollatish va energiya samaradorligi kabi muhim jihatlarga alohida e'tibor qaratilgan.",
+  "feature1": "Xalqaro standartlar",
+  "feature2": "Yuqori xavfsizlik",
+  "feature3": "Professional jihozlar",
+  "feature4": "Energiya samaradorligi",
+  "allProjects": "Barcha loyihalar"
+},
+"valuesSection": {
+  "tag": "Bizning qadriyatlar",
+  "title": "Muvaffaqiyatimiz asoslari",
+  "value1Title": "Sifat",
+  "value1Text": "Har bir loyihada eng yuqori sifat standartlariga rioya qilamiz va mijozlarimiz kutganidan ham yaxshiroq natijalar taqdim etamiz",
+  "value2Title": "Vaqtni tejash",
+  "value2Text": "Loyihalarni belgilangan muddatlarda yetkazib berish va mijozlarimiz vaqtini qadrlash bizning ustuvor vazifamizdir",
+  "value3Title": "Innovatsiya",
+  "value3Text": "Zamonaviy texnologiyalar va innovatsion yechimlarni qo'llash orqali eng samarali natijalarni ta'minlaymiz"
+},
+"gallerySection": {
+  "tag": "Galereya",
+  "title": "Loyihalarimizdan lavhalar",
+  "item1Title": "Qurilish jarayoni",
+  "item1Text": "Professional yondashuv",
+  "item2Title": "Zamonaviy texnologiyalar",
+  "item2Text": "Ilg'or uskunalar",
+  "item3Title": "Tugallangan loyihalar",
+  "item3Text": "Sifatli natijalar"
+},
+"ctaSection": {
+  "title": "Keling, birgalikda ajoyib loyihalar yaratamiz",
+  "text": "Cosco Engineering jamoasi sizning g'oyalaringizni haqiqatga aylantirish uchun tayyor",
+  "button": "Biz bilan bog'laning"
+},
+"projectsProject": {
+  "stats": {
+    "label": "Loyihalar statistikasi"
+  },
+  "slides": [
+    {
+      "title": "BOKS MAHORAT MAKTABI",
+      "description": "Cosco Engineering tomonidan loyihalashtirilgan va qurilgan mazkur sport inshooti barcha zamonaviy talablar asosida jihozlangan. Sportchilarning samarali mashg‘ulotlari va musobaqalarga tayyorgarligi uchun optimal sharoitlar yaratilgan."
+    },
+    {
+      "title": "QARSHI DAVLAT UNIVERSITETI YOTOXONASI",
+      "description": "Talabalar uchun mo‘ljallangan bu yotoqxona Cosco Engineering’ning qulaylik, xavfsizlik va funksionallikni birlashtirgan loyihasidir. Binoda barcha zarur kommunikatsiyalar, yoritish va havoni ventilyatsiya qilish tizimlari zamonaviy texnologiyalar asosida joriy etilgan."
+    },
+    {
+      "title": "CHIRCHIQ DAVLAT PEDAGOGIKA UNIVERSITETI BINOSI",
+      "description": "Taʼlim sohasi uchun muhim ahamiyatga ega bo‘lgan mazkur obyekt Cosco Engineering tomonidan yuqori sifatli materiallar va ilg‘or qurilish texnologiyalari asosida bunyod etilgan. Binoda o‘quv jarayonlari uchun barcha sharoitlar yaratilgan."
+    }
+  ]
+},
+"portfolio": {
+  "section": {
+    "label": "Portfolio",
+    "title": "Tugallangan loyihalarimiz"
+  },
+  "items": [
+    {
+      "category": "Sport inshooti",
+      "title": "Boks mahorati maktabi",
+      "location": "Toshkent, Yunusobod tumani",
+      "year": "2023-yil"
+    },
+    {
+      "category": "Turar-joy",
+      "title": "Zamonaviy turar-joy majmuasi",
+      "location": "Toshkent, Chilonzor tumani",
+      "year": "2022-yil"
+    },
+    {
+      "category": "Tijorat binosi",
+      "title": "Biznes markaz",
+      "location": "Toshkent, Mirzo Ulug'bek tumani",
+      "year": "2023-yil"
+    },
+    {
+      "category": "Sanoat",
+      "title": "Ishlab chiqarish kompleksi",
+      "location": "Toshkent viloyati",
+      "year": "2022-yil"
+    },
+    {
+      "category": "Ta'lim",
+      "title": "Zamonaviy maktab binosi",
+      "location": "Toshkent, Bektemir tumani",
+      "year": "2021-yil"
+    },
+    {
+      "category": "Yangi loyiha",
+      "title": "Yangi loyiha",
+      "location": "Tez orada...",
+      "year": ""
+    }
+  ]
+}
+,
+"services": {
+  "subtitle": "Xizmatlar",
+  "title": "Biz taklif qiladigan xizmatlar",
+  "items": [
+    {
+      "title": "Qurilish ishlari",
+      "description": "Turar-joy, tijorat va sanoat binolarini qurilishi"
+    },
+    {
+      "title": "Loyihalash",
+      "description": "Arxitektura va muhandislik loyihalarini ishlab chiqish"
+    },
+    {
+      "title": "Loyiha boshqaruvi",
+      "description": "Professional loyiha boshqaruvi va nazorati"
+    },
+    {
+      "title": "Muhandislik",
+      "description": "Kompleks muhandislik yechimlari va konsalting"
+    },
+    {
+      "title": "Rekonstruksiya",
+      "description": "Binolarni zamonaviy talablarga moslashtirish"
+    },
+    {
+      "title": "Texnik nazorat",
+      "description": "Qurilish sifati va xavfsizlik nazorati"
+    }
+  ]
+}
+,
+"ctaProject": {
+  "title": "Sizning loyihangiz uchun tayyormiz",
+  "description": "Professional jamoa va zamonaviy texnologiyalar yordamida har qanday murakkablikdagi loyihalarni amalga oshiramiz",
+  "button": "Loyihani boshlash"
+},
+"contact": {
+  "heroTitle": "Biz bilan bog'laning",
+  "heroSubtitle": "Loyihangizni muhokama qilish uchun biz bilan bog'laning",
+  "breadcrumb": "Aloqa",
+
+  "infoTitle": "Aloqa ma'lumotlari",
+  "infoHeader": "Biz bilan bog'laning",
+  "infoText": "Sizning loyihangiz haqida ko'proq ma'lumot olish uchun biz bilan bog'laning.",
+
+  "phone": "Telefon",
+  "email": "Email",
+  "address": "Manzil",
+  "hours": "Ish vaqti",
+  "hoursText": "Dushanba - Juma: 9:00 - 18:00 \n Shanba: 9:00 - 15:00",
+
+  "socialTitle": "Ijtimoiy tarmoqlar:",
+
+  "formTitle": "Xabar yuborish",
+  "form": {
+    "name": "Ism",
+    "namePlaceholder": "Ismingizni kiriting",
+    "phone": "Telefon",
+    "phonePlaceholder": "+998 __ ___ __ __",
+    "email": "Email",
+    "emailPlaceholder": "email@example.com",
+    "subject": "Mavzu",
+    "selectSubject": "Mavzuni tanlang",
+    "subjectBuild": "Qurilish xizmatlari",
+    "subjectDesign": "Loyihalash",
+    "subjectConsulting": "Konsalting",
+    "subjectOther": "Boshqa",
+    "message": "Xabar",
+    "messagePlaceholder": "Xabaringizni yozing...",
+    "submit": "Xabar yuborish"
+  },
+
+  "mapLabel": "Bizning manzil",
+  "mapTitle": "Ofisimizga tashrif buyuring",
+
+  "ctaTitle": "Loyihangizni bugun boshlang",
+  "ctaSubtitle": "Professional maslahat va sifatli xizmat uchun biz bilan bog'laning",
+  "ctaCall": "Qo'ng'iroq qiling",
+  "ctaMail": "Email yuborish",
+  "addressText": "Toshkent shahar, Mirobod tumani<br />Mironshoh 6-boshiberk ko'cha, 18/141-uy"
+
+},
+"footer": {
+  "companyDescription": "Cosco Engineering — zamonaviy qurilish va muhandislik yechimlari kompaniyasi. Biz sifat va ishonchni birinchi o'ringa qo'yamiz.",
+  "quickLinks": "Tez havolalar",
+  "links": {
+    "home": "Bosh sahifa",
+    "about": "Kompaniya haqida",
+    "projects": "Loyihalar",
+    "contact": "Aloqa"
+  },
+  "contact": {
+    "title": "Aloqa ma'lumotlari",
+    "phone": "Telefon",
+    "email": "Email",
+    "addressLabel": "Manzil",
+    "addressText": "Toshkent shahar, Mirobod tumani Mironshoh 6-boshiberk ko'cha, 18/141-uy"
+  },
+  "visit": {
+    "title": "Bizning manzil"
+  },
+  "bottom": {
+    "createdBy": "Sayt yaratildi:"
+  },
+  "copyright": "© {{year}} Cosco Engineering. Barcha huquqlar himoyalangan."
+}
+
+
+
+
 }

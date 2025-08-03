@@ -3,44 +3,43 @@
   <!-- Main Footer Content -->
   <div class="container mx-auto px-6 md:px-12 lg:px-20 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-      
       <!-- Company Info -->
       <div class="space-y-6">
         <div>
-          <img 
-            src="assets/image/logo.png" 
-            alt="Cosco Engineering" 
+          <img
+            src="assets/image/logo.png"
+            alt="Cosco Engineering"
             class="h-16 mb-6"
           />
           <p class="text-gray-400 leading-relaxed">
-            Cosco Engineering — zamonaviy qurilish va muhandislik yechimlari kompaniyasi. Biz sifat va ishonchni birinchi o'ringa qo'yamiz.
+            {{ "footer.companyDescription" | translate }}
           </p>
         </div>
-        
+
         <!-- Social Links -->
         <div class="flex space-x-4">
-          <a 
-            href="#" 
+          <a
+            href="#"
             class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
           >
             <i class="fab fa-facebook-f text-white group-hover:text-white"></i>
           </a>
-          <a 
-            href="#" 
+          <a
+            href="#"
             target="_blank"
             class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
           >
             <i class="fab fa-instagram text-white group-hover:text-white"></i>
           </a>
-          <a 
-            href="#" 
+          <a
+            href="#"
             target="_blank"
             class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
           >
             <i class="fab fa-telegram text-white group-hover:text-white"></i>
           </a>
-          <a 
-            href="#" 
+          <a
+            href="#"
             target="_blank"
             class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C4751A] transition-all duration-300 group"
           >
@@ -48,122 +47,141 @@
           </a>
         </div>
       </div>
-      
+
       <!-- Quick Links -->
       <div>
-        <h3 class="text-xl font-bold mb-6 text-white">Tez havolalar</h3>
+        <h3 class="text-xl font-bold mb-6 text-white">
+          {{ "footer.quickLinks" | translate }}
+        </h3>
         <ul class="space-y-3">
           <li>
-            <a 
-              routerLink="/home" 
+            <a
+              routerLink="/home"
               class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
             >
-              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              <span>Bosh sahifa</span>
+              <span
+                class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              ></span>
+              <span> {{ "footer.links.home" | translate }} </span>
             </a>
           </li>
           <li>
-            <a 
-              routerLink="/about" 
+            <a
+              routerLink="/about"
               class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
             >
-              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              <span>Kompaniya haqida</span>
+              <span
+                class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              ></span>
+              <span> {{ "footer.links.about" | translate }} </span>
             </a>
           </li>
           <li>
-            <a 
-              routerLink="/project" 
+            <a
+              routerLink="/project"
               class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
             >
-              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              <span>Loyihalar</span>
+              <span
+                class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              ></span>
+              <span>{{ "footer.links.projects" | translate }}</span>
             </a>
           </li>
           <li>
-            <a 
-              routerLink="/contact" 
+            <a
+              routerLink="/contact"
               class="text-gray-400 hover:text-[#C4751A] transition-colors duration-300 flex items-center gap-2 group"
             >
-              <span class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              <span>Aloqa</span>
+              <span
+                class="w-1.5 h-1.5 bg-[#C4751A] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              ></span>
+              <span>{{ "footer.links.contact" | translate }}</span>
             </a>
           </li>
         </ul>
       </div>
-      
+
       <!-- Contact Info -->
       <div>
-        <h3 class="text-xl font-bold mb-6 text-white">Aloqa ma'lumotlari</h3>
+        <h3 class="text-xl font-bold mb-6 text-white">{{'footer.contact.title'|translate}}</h3>
         <div class="space-y-4">
           <!-- Phone -->
           <div class="flex items-start gap-3">
-            <div class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div
+              class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0"
+            >
               <i class="fas fa-phone text-[#C4751A]"></i>
             </div>
             <div>
-              <p class="text-sm text-gray-400 mb-1">Telefon</p>
-              <a 
-                href="tel:+998712558822" 
+              <p class="text-sm text-gray-400 mb-1">{{'footer.contact.phone'|translate}}</p>
+              <a
+                href="tel:+998712558822"
                 class="text-white hover:text-[#C4751A] transition-colors duration-300"
               >
                 +998 (71) 255-88-22
               </a>
             </div>
           </div>
-          
+
           <!-- Email -->
           <div class="flex items-start gap-3">
-            <div class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div
+              class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0"
+            >
               <i class="fas fa-envelope text-[#C4751A]"></i>
             </div>
             <div>
-              <p class="text-sm text-gray-400 mb-1">Email</p>
-              <a 
-                [href]="'mailto:' + email" 
+              <p class="text-sm text-gray-400 mb-1">{{'footer.contact.email'|translate}}</p>
+              <a
+                [href]="'mailto:' + email"
                 class="text-white hover:text-[#C4751A] transition-colors duration-300"
               >
                 {{ email }}
               </a>
             </div>
           </div>
-          
+
           <!-- Address -->
           <div class="flex items-start gap-3">
-            <div class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div
+              class="w-10 h-10 bg-[#C4751A]/20 rounded-lg flex items-center justify-center flex-shrink-0"
+            >
               <i class="fas fa-map-marker-alt text-[#C4751A]"></i>
             </div>
             <div>
-              <p class="text-sm text-gray-400 mb-1">Manzil</p>
+              <p class="text-sm text-gray-400 mb-1">{{'footer.contact.addressLabel'|translate}}</p>
               <p class="text-white">
-                Toshkent shahar, Mirobod tumani<br>
-                Mironshoh 6-boshiberk ko'cha, 18/141-uy
+                {{ 'footer.contact.addressText' | translate }}
               </p>
             </div>
           </div>
         </div>
       </div>
-      
+
       <!-- Map -->
       <div>
-        <h3 class="text-xl font-bold mb-6 text-white">Bizning manzil</h3>
+        <h3 class="text-xl font-bold mb-6 text-white">{{'footer.visit.title'|translate}}</h3>
         <div class="w-full h-64 rounded-xl shadow-2xl overflow-hidden">
           <div id="yandex-map" class="w-full h-full"></div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!-- Bottom Bar -->
   <div class="border-t border-gray-800">
     <div class="container mx-auto px-6 md:px-12 lg:px-20 py-6">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-        <p>© {{ currentYear }} Cosco Engineering. Barcha huquqlar himoyalangan.</p>
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400"
+      >
+        <p>
+          {{ 'footer.copyright' | translate:{year: currentYear} }}
+        </p>
         <div class="flex items-center gap-2">
-          <span>Sayt yaratildi:</span>
-          <a 
-            href="https://isbd.uz/" 
-            target="_blank" 
+          <span>{{'footer.bottom.createdBy'|translate}}</span>
+          <a
+            href="https://isbd.uz/"
+            target="_blank"
             class="text-[#C4751A] font-semibold hover:text-white transition-colors duration-300"
           >
             SBD
@@ -172,9 +190,9 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Back to Top Button -->
-  <button 
+  <button
     *ngIf="showBackToTop"
     (click)="scrollToTop()"
     class="fixed bottom-8 right-8 w-12 h-12 bg-[#C4751A] text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#a05d14] transition-all duration-300 z-50 animate-fadeIn"

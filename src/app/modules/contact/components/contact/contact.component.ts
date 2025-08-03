@@ -1,10 +1,11 @@
 import { Component, HostListener } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 declare const ymaps: any;
 
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

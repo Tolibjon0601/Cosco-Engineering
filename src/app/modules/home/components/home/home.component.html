@@ -1,69 +1,69 @@
 <!-- Hero Section with Modern Slider -->
-<div class="relative w-screen h-screen">
-  <swiper-container
-    loop="true"
-    autoplay-delay="5000"
-    class="w-full h-full"
-    speed="1500"
-    effect="fade"
-    pagination="true"
-    pagination-clickable="true"
-  >
-    <swiper-slide *ngFor="let slide of slides; let i = index">
-      <div
-        class="w-full h-full bg-cover bg-center relative"
-        [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
-      >
-        <!-- Modern Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-        
-        <!-- Content -->
-        <div class="absolute inset-0 flex items-center">
-          <div class="container mx-auto px-6 md:px-12 lg:px-20">
-            <div class="max-w-3xl animate-fadeIn">
-              <!-- Subtitle -->
-              <span class="inline-block text-[#C4751A] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 animate-slideInLeft">
-                Cosco Engineering
-              </span>
-              
-              <!-- Title -->
-              <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight animate-slideInLeft" style="animation-delay: 0.2s">
-                {{ slide.title }}
-              </h1>
-              
-              <!-- CTA Button -->
-              <div class="animate-slideInLeft" style="animation-delay: 0.4s">
-                <a 
-                  routerLink="/contact" 
-                  class="btn-primary inline-flex items-center gap-2 group"
-                >
-                  <span>{{ slide.button }}</span>
+  <div class="relative w-screen h-screen">
+    <swiper-container
+      loop="true"
+      autoplay-delay="5000"
+      class="w-full h-full"
+      speed="1500"
+      effect="fade"
+      pagination="true"
+      pagination-clickable="true"
+    >
+      <swiper-slide *ngFor="let slide of slides; let i = index">
+        <div
+          class="w-full h-full bg-cover bg-center relative"
+          [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
+        >
+          <!-- Modern Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 flex items-center">
+            <div class="container mx-auto px-6 md:px-12 lg:px-20">
+              <div class="max-w-3xl animate-fadeIn">
+                <!-- Subtitle -->
+                <span class="inline-block text-[#C4751A] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 animate-slideInLeft">
+                  Cosco Engineering
+                </span>
+
+                <!-- Title -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight animate-slideInLeft" style="animation-delay: 0.2s">
+                  {{ slide.titleKey | translate }}
+                </h1>
+
+                <!-- CTA Button -->
+                <div class="animate-slideInLeft" style="animation-delay: 0.4s">
+                  <a
+                    routerLink="/contact"
+                    class="btn-primary inline-flex items-center gap-2 group"
+                  >
+                  <span>{{ slide.buttonKey | translate }}</span>
                   <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide Counter -->
+          <div class="absolute bottom-10 right-10 text-white/50 text-lg font-medium">
+            <span class="text-3xl text-white">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+            <span class="mx-2">/</span>
+            <span>{{ slides.length < 10 ? '0' + slides.length : slides.length }}</span>
+          </div>
         </div>
-        
-        <!-- Slide Counter -->
-        <div class="absolute bottom-10 right-10 text-white/50 text-lg font-medium">
-          <span class="text-3xl text-white">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
-          <span class="mx-2">/</span>
-          <span>{{ slides.length < 10 ? '0' + slides.length : slides.length }}</span>
-        </div>
-      </div>
-    </swiper-slide>
-  </swiper-container>
-  
-  <!-- Scroll Indicator -->
-  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-    </svg>
+      </swiper-slide>
+    </swiper-container>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
   </div>
-</div>
 
 <!-- About Section -->
 <section class="section-padding bg-gray-50">
@@ -71,48 +71,51 @@
     <!-- Section Header -->
     <div class="text-center mb-16 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
-        Biz haqimizda
+        {{ 'about.subtitle' | translate }}
       </span>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-        Zamonaviy qurilishning yangi standarti
+        {{ 'about.title' | translate }}
       </h2>
       <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
     </div>
-    
+
     <!-- Content Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
       <div class="animate-slideInLeft">
         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-          Cosco Engineering — bu zamonaviy texnologiyalar, sifatli injiniring va ishonchli qurilishning uyg'unlashuvi
+          {{ 'about.description.heading' | translate }}
+
         </h3>
         <p class="text-gray-600 text-lg leading-relaxed mb-6">
-          Kompaniyamiz muhandislikdan tortib to to'liq qurilish yakunigacha bo'lgan barcha bosqichlarni amalga oshiradi. Har bir loyiha — bu biz uchun mas'uliyat va ishonch ramzi.
+          {{ 'about.description.p1' | translate }}
+
         </p>
         <p class="text-gray-600 text-lg leading-relaxed">
-          Biz yirik sanoat inshootlari, turar-joy majmualari va tijorat binolarini loyihalashtirib, sifatli tarzda hayotga tatbiq etamiz. Texnik jihatdan mukammallik, ekologik xavfsizlik va iqtisodiy samaradorlik — asosiy ustuvorliklarimizdir.
+          {{ 'about.description.p2' | translate }}
+
         </p>
       </div>
-      
+
       <div class="grid grid-cols-2 gap-6 animate-slideInRight">
         <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
           <div class="text-5xl font-bold text-[#C4751A] mb-2">15+</div>
-          <p class="text-gray-600">Yillik tajriba</p>
+          <p class="text-gray-600"> {{ 'about.stats.experience' | translate }} </p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
           <div class="text-5xl font-bold text-[#C4751A] mb-2">200+</div>
-          <p class="text-gray-600">Tugallangan loyihalar</p>
+          <p class="text-gray-600"> {{ 'about.stats.projects' | translate }} </p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
           <div class="text-5xl font-bold text-[#C4751A] mb-2">50+</div>
-          <p class="text-gray-600">Professional jamoa</p>
+          <p class="text-gray-600"> {{ 'about.stats.team' | translate }} </p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
           <div class="text-5xl font-bold text-[#C4751A] mb-2">100%</div>
-          <p class="text-gray-600">Mijoz mamnuniyati</p>
+          <p class="text-gray-600"> {{ 'about.stats.satisfaction' | translate }} </p>
         </div>
       </div>
     </div>
-    
+
     <!-- Features -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Feature 1 -->
@@ -122,21 +125,24 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Yirik loyihalar</h3>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">      {{ 'about.features.1.title' | translate }}
+        </h3>
         <p class="text-gray-600 mb-6">
-          Cosco Engineering O'zbekiston bo'ylab ko'plab yirik infratuzilma va turar-joy loyihalarini muvaffaqiyatli amalga oshirib kelmoqda.
+          {{ 'about.features.1.desc' | translate }}
+
         </p>
         <a
           routerLink="/about"
           class="inline-flex items-center text-[#C4751A] font-semibold hover:gap-3 gap-2 transition-all duration-300"
         >
-          Batafsil
+        {{ 'about.button' | translate }}
+
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
       </div>
-      
+
       <!-- Feature 2 -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover text-center group">
         <div class="w-20 h-20 bg-[#C4751A]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C4751A] transition-colors duration-300">
@@ -144,21 +150,23 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Innovatsion yondashuv</h3>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">      {{ 'about.features.2.title' | translate }}
+        </h3>
         <p class="text-gray-600 mb-6">
-          Har bir qurilishda zamonaviy texnologiyalar va ilg'or injiniring yechimlaridan foydalanamiz. Bu bizni farqlab turadi.
+          {{ 'about.features.2.desc' | translate }}
+
         </p>
         <a
           routerLink="/about"
           class="inline-flex items-center text-[#C4751A] font-semibold hover:gap-3 gap-2 transition-all duration-300"
         >
-          Batafsil
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {{ 'about.button' | translate }}
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
       </div>
-      
+
       <!-- Feature 3 -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover text-center group">
         <div class="w-20 h-20 bg-[#C4751A]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C4751A] transition-colors duration-300">
@@ -166,15 +174,18 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Ishonchli hamkorlik</h3>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">      {{ 'about.features.3.title' | translate }}
+        </h3>
         <p class="text-gray-600 mb-6">
-          Davlat va xususiy sektor bilan hamkorlikda bir qancha muvaffaqiyatli loyihalarni amalga oshirdik. Bizga ishonishadi — chunki natija bor.
+          {{ 'about.features.3.desc' | translate }}
+
         </p>
         <a
           routerLink="/about"
           class="inline-flex items-center text-[#C4751A] font-semibold hover:gap-3 gap-2 transition-all duration-300"
         >
-          Batafsil
+        {{ 'about.button' | translate }}
+
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
@@ -193,44 +204,44 @@
     speed="1500"
     effect="fade"
   >
-    <swiper-slide *ngFor="let slide of slidessecond">
-      <div class="w-full h-full grid grid-cols-1 lg:grid-cols-2">
-        <!-- Image -->
-        <div
-          class="w-full h-full bg-cover bg-center order-2 lg:order-1"
-          [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
-        ></div>
-        
-        <!-- Content -->
-        <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white flex items-center px-8 lg:px-16 py-12 order-1 lg:order-2">
-          <div class="w-full">
-            <!-- Label -->
-            <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-6">
-              Loyihamiz haqida
-            </span>
-            
-            <!-- Stats -->
-            <div class="mb-8">
-              <div class="text-6xl md:text-7xl font-bold text-gradient mb-4">{{ slide.stats }}</div>
-              <p class="text-gray-300 text-lg leading-relaxed max-w-md">
-                {{ slide.statsDescription }}
-              </p>
+  <swiper-slide *ngFor="let slide of slidessecond">
+    <div class="w-full h-full grid grid-cols-1 lg:grid-cols-2">
+      <!-- Image -->
+      <div
+        class="w-full h-full bg-cover bg-center order-2 lg:order-1"
+        [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
+      ></div>
+
+      <!-- Content -->
+      <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white flex items-center px-8 lg:px-16 py-12 order-1 lg:order-2">
+        <div class="w-full">
+          <!-- Label -->
+          <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-6">
+            {{ 'projects.sectionLabel' | translate }}
+          </span>
+
+          <!-- Stats -->
+          <div class="mb-8">
+            <div class="text-6xl md:text-7xl font-bold text-gradient mb-4">
+              {{ slide.stats | translate }}
             </div>
-            
-            <!-- CTA -->
-            <a
-              routerLink="/project"
-              class="btn-primary inline-flex items-center gap-2 group"
-            >
-              <span>{{ slide.button }}</span>
-              <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </a>
+            <p class="text-gray-300 text-lg leading-relaxed max-w-md">
+              {{ slide.statsDescription | translate }}
+            </p>
           </div>
+
+          <!-- CTA -->
+          <a routerLink="/project" class="btn-primary inline-flex items-center gap-2 group">
+            <span>{{ slide.button | translate }}</span>
+            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
         </div>
       </div>
-    </swiper-slide>
+    </div>
+  </swiper-slide>
+
   </swiper-container>
 </div>
 
@@ -241,25 +252,25 @@
     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12">
       <div class="animate-slideInLeft">
         <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
-          Loyihalar
+          {{ 'projects.sectionTag' | translate }}
         </span>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-          Qurilgan va rejalashtirilgan obyektlar
+          {{ 'projects.sectionTitle' | translate }}
         </h2>
       </div>
       <div class="animate-slideInRight">
-        <a 
-          routerLink="/project" 
+        <a
+          routerLink="/project"
           class="btn-secondary inline-flex items-center gap-2 group"
         >
-          <span>Barcha loyihalar</span>
+          <span>{{ 'projects.allProjects' | translate }}</span>
           <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
       </div>
     </div>
-    
+
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Project 1 -->
@@ -272,23 +283,23 @@
           style="background-image: url('assets/image/slider_5.jpg')"
         ></div>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-        
+
         <div class="relative z-10 h-full flex flex-col justify-between p-8">
           <!-- Project Number -->
           <div class="text-right">
             <span class="text-6xl font-bold text-white/20">01</span>
           </div>
-          
+
           <!-- Project Info -->
           <div>
             <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-3">
-              Tugallangan loyiha
+              {{ 'projects.project1.status' | translate }}
             </span>
-            <h3 class="text-3xl font-bold text-white mb-3">Boks mahorati maktabi</h3>
-            <p class="text-white/80 text-lg mb-4">Toshkent, Yunusobod 9-chi</p>
-            
+            <h3 class="text-3xl font-bold text-white mb-3">{{ 'projects.project1.title' | translate }}</h3>
+            <p class="text-white/80 text-lg mb-4">{{ 'projects.project1.location' | translate }}</p>
+
             <div class="inline-flex items-center gap-2 text-white group-hover:gap-3 transition-all duration-300">
-              <span class="font-semibold">Batafsil ko'rish</span>
+              <span class="font-semibold">{{ 'projects.details' | translate }}</span>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
@@ -296,26 +307,26 @@
           </div>
         </div>
       </a>
-      
-      <!-- Project 2 -->
+
+      <!-- Project 2 (Coming Soon) -->
       <div
         class="group relative h-[500px] rounded-2xl overflow-hidden shadow-xl bg-cover bg-center"
         style="background-image: url('assets/image/slider_3.jpg')"
       >
         <div class="absolute inset-0 bg-black/60"></div>
-        
+
         <div class="relative z-10 h-full flex flex-col justify-between p-8">
-          <!-- Project Number -->
           <div class="text-right">
             <span class="text-6xl font-bold text-white/20">02</span>
           </div>
-          
-          <!-- Coming Soon -->
+
           <div class="flex-1 flex items-center justify-center">
             <div class="text-center">
               <div class="w-20 h-20 border-4 border-[#C4751A] border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-              <h3 class="text-3xl font-bold text-white mb-3">Tez orada yangi loyiha</h3>
-              <p class="text-white/70 text-lg">Kuzatib boring...</p>
+              <h3 class="text-3xl font-bold text-white mb-3">
+                {{ 'projects.comingSoon.title' | translate }}
+              </h3>
+              <p class="text-white/70 text-lg">{{ 'projects.comingSoon.subtitle' | translate }}</p>
             </div>
           </div>
         </div>
@@ -330,14 +341,14 @@
     <!-- Section Header -->
     <div class="text-center mb-16 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
-        Nega bizni tanlashadi?
+        {{ 'why.titleTag' | translate }}
       </span>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-        Cosco Engineering afzalliklari
+        {{ 'why.title' | translate }}
       </h2>
       <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
     </div>
-    
+
     <!-- Features Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Feature 1 -->
@@ -347,12 +358,10 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Mustahkam infratuzilma</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Qurilish maydonlarida zamonaviy texnologiyalar asosida barpo etilgan kuchli infratuzilma.
-        </p>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">{{ 'why.feature1.title' | translate }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ 'why.feature1.desc' | translate }}</p>
       </div>
-      
+
       <!-- Feature 2 -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover group animate-fadeIn" style="animation-delay: 0.1s">
         <div class="w-16 h-16 bg-[#C4751A]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C4751A] transition-colors duration-300">
@@ -360,12 +369,10 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Innovatsion dizayn</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Har bir loyiha zamonaviy arxitektura va ergonomik dizayn tamoyillariga asoslanadi.
-        </p>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">{{ 'why.feature2.title' | translate }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ 'why.feature2.desc' | translate }}</p>
       </div>
-      
+
       <!-- Feature 3 -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover group animate-fadeIn" style="animation-delay: 0.2s">
         <div class="w-16 h-16 bg-[#C4751A]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C4751A] transition-colors duration-300">
@@ -373,12 +380,10 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Tajribali mutaxassislar</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Kompaniyamizda malakali muhandislar, loyihalovchilar va ustalar faoliyat yuritadi.
-        </p>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">{{ 'why.feature3.title' | translate }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ 'why.feature3.desc' | translate }}</p>
       </div>
-      
+
       <!-- Feature 4 -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover group animate-fadeIn" style="animation-delay: 0.3s">
         <div class="w-16 h-16 bg-[#C4751A]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C4751A] transition-colors duration-300">
@@ -386,12 +391,10 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Xavfsizlik standarti</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Qurilish jarayonida barcha xavfsizlik va mehnat muhofazasi standartlariga rioya qilinadi.
-        </p>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">{{ 'why.feature4.title' | translate }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ 'why.feature4.desc' | translate }}</p>
       </div>
-      
+
       <!-- Feature 5 -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover group animate-fadeIn" style="animation-delay: 0.4s">
         <div class="w-16 h-16 bg-[#C4751A]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C4751A] transition-colors duration-300">
@@ -399,12 +402,10 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Ekologik yechimlar</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Loyihalar ekologik toza materiallar va yashil hududlarga eʼtibor bilan yaratiladi.
-        </p>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">{{ 'why.feature5.title' | translate }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ 'why.feature5.desc' | translate }}</p>
       </div>
-      
+
       <!-- Feature 6 -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover group animate-fadeIn" style="animation-delay: 0.5s">
         <div class="w-16 h-16 bg-[#C4751A]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C4751A] transition-colors duration-300">
@@ -412,10 +413,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Toʻliq xizmatlar</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Loyiha tayyorlashdan tortib, foydalanishga topshirilgunga qadar barcha bosqichlar biz tomonidan amalga oshiriladi.
-        </p>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">{{ 'why.feature6.title' | translate }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ 'why.feature6.desc' | translate }}</p>
       </div>
     </div>
   </div>
@@ -426,18 +425,18 @@
   <div class="absolute inset-0 bg-black/70"></div>
   <div class="relative z-10 container mx-auto px-6 md:px-12 lg:px-20 text-center">
     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-fadeIn">
-      Loyihangizni biz bilan amalga oshiring
+      {{ 'cta.title' | translate }}
     </h2>
     <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.2s">
-      Professional jamoa, zamonaviy yechimlar va kafolatlangan sifat
+      {{ 'cta.subtitle' | translate }}
     </p>
     <div class="animate-fadeIn" style="animation-delay: 0.4s">
-      <a 
-        routerLink="/contact" 
+      <a
+        routerLink="/contact"
         class="btn-primary inline-flex items-center gap-2 group text-lg"
       >
-        <span>Bog'lanish</span>
-        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <span>{{ 'cta.button' | translate }}</span>
+      <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>

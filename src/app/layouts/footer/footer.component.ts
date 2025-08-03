@@ -1,11 +1,12 @@
 import { Component ,HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 declare const ymaps: any;
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,TranslateModule],
 templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

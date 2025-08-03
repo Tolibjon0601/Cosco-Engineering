@@ -2,16 +2,16 @@
 <div class="relative w-full h-[70vh] bg-cover bg-center bg-fixed" style="background-image: url('assets/image/page-title-bg.jpg');">
   <!-- Modern Gradient Overlay -->
   <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
-  
+
   <!-- Content -->
   <div class="relative z-10 h-full flex items-center">
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
       <div class="max-w-3xl animate-fadeIn">
         <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slideInLeft">
-          Biz haqimizda
+          {{ 'aboutUs.title' | translate }}
         </h1>
         <p class="text-xl text-white/80 mb-8 animate-slideInLeft" style="animation-delay: 0.2s">
-          Zamonaviy qurilish va muhandislik yechimlarining ishonchli hamkoringiz
+          {{ 'aboutUs.subtitle' | translate }}
         </p>
         <!-- Breadcrumb -->
         <nav class="flex items-center gap-3 text-white/60 animate-slideInLeft" style="animation-delay: 0.4s">
@@ -19,12 +19,12 @@
             <i class="fas fa-home"></i>
           </a>
           <span>/</span>
-          <span class="text-white">Biz haqimizda</span>
+          <span class="text-white">{{ 'aboutUs.breadcrumb.current' | translate }}</span>
         </nav>
       </div>
     </div>
   </div>
-  
+
   <!-- Scroll Indicator -->
   <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,35 +40,18 @@
       <!-- Section Header -->
       <div class="text-center mb-12 animate-fadeIn">
         <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
-          Kompaniya tarixi
+          {{ 'company.historyLabel' | translate }}
         </span>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          COSCO ENGINEERING haqida qisqacha
+          {{ 'company.summaryTitle' | translate }}
         </h2>
         <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
       </div>
-      
+
       <!-- Content -->
       <div class="space-y-6 text-gray-600 text-lg leading-relaxed animate-fadeIn">
-        <p>
-          <strong class="text-gray-900">COSCO ENGINEERING</strong> — bu O'zbekistonda zamonaviy qurilish, loyihalash va muhandislik xizmatlarini taqdim etuvchi ishonchli kompaniya.
-        </p>
-        
-        <p>
-          2017-yildan beri biz turli darajadagi infratuzilma obyektlari, davlat va xususiy sektor uchun qurilish loyihalarini sifatli amalga oshirib kelmoqdamiz.
-        </p>
-        
-        <p>
-          Ko'p yillik tajriba, malakali mutaxassislar va ilg'or texnologiyalar asosida Cosco Engineering muhandislik, loyiha boshqaruvi va qurilishda yuqori standartlarga amal qiladi. Bizning yondashuv – har bir loyiha uchun kompleks va barqaror yechim taklif qilishdir.
-        </p>
-        
-        <p>
-          Bugungi kunda COSCO ENGINEERING respublikamizda o'zini ishonchli va mas'uliyatli hamkor sifatida namoyon etib, texnik imkoniyatlari va sifatga sadoqati bilan ajralib turadi.
-        </p>
-        
-        <p>
-          Biz innovatsion yondashuv, xavfsizlik va samaradorlikka ustuvorlik beramiz. Mijozlarimiz ehtiyojlariga mos yechimlar taqdim etish — bizning asosiy vazifamizdir.
-        </p>
+        <p *ngFor="let text of ('company.paragraphs' | translate)">{{ text }}</p>
+
       </div>
     </div>
   </div>
@@ -80,21 +63,22 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
       <div class="animate-fadeIn">
         <div class="text-5xl font-bold text-[#C4751A] mb-3">7+</div>
-        <p class="text-gray-400">Yillik tajriba</p>
+        <p class="text-gray-400">{{ 'stats.experience' | translate }}</p>
       </div>
       <div class="animate-fadeIn" style="animation-delay: 0.1s">
         <div class="text-5xl font-bold text-[#C4751A] mb-3">200+</div>
-        <p class="text-gray-400">Tugallangan loyihalar</p>
+        <p class="text-gray-400">{{ 'stats.projects' | translate }}</p>
       </div>
       <div class="animate-fadeIn" style="animation-delay: 0.2s">
         <div class="text-5xl font-bold text-[#C4751A] mb-3">50+</div>
-        <p class="text-gray-400">Professional jamoa</p>
+        <p class="text-gray-400">{{ 'stats.team' | translate }}</p>
       </div>
       <div class="animate-fadeIn" style="animation-delay: 0.3s">
         <div class="text-5xl font-bold text-[#C4751A] mb-3">100%</div>
-        <p class="text-gray-400">Mijoz mamnuniyati</p>
+        <p class="text-gray-400">{{ 'stats.satisfaction' | translate }}</p>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -104,70 +88,72 @@
     <!-- Section Header -->
     <div class="text-center mb-16 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
-        Muhim loyiha
+        {{ 'featuredProject.tag' | translate }}
       </span>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        Sport va sog'lom turmush sari ishonchli qadam
+        {{ 'featuredProject.title' | translate }}
       </h2>
       <p class="text-gray-600 text-lg max-w-3xl mx-auto">
-        Cosco Engineering tomonidan loyihalashtirilgan va qurilgan Boks mahorat maktabi – bu professional sportchilar va yosh avlod uchun zamonaviy, xavfsiz va qulay sport inshootidir.
+        {{ 'featuredProject.description' | translate }}
+
       </p>
     </div>
-    
+
     <!-- Project Showcase -->
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <!-- Image -->
         <div class="h-96 lg:h-full relative group overflow-hidden">
-          <img 
-            src="assets/image/slider_5.jpg" 
-            alt="Boks Maktabi Loyiha" 
+          <img
+            src="assets/image/slider_5.jpg"
+            alt="Boks Maktabi Loyiha"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
-        
+
         <!-- Content -->
         <div class="p-10 lg:p-16 flex items-center">
           <div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-6">Boks mahorat maktabi</h3>
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">{{ 'featuredProject.projectTitle' | translate }}</h3>
             <p class="text-gray-600 text-lg leading-relaxed mb-8">
-              Ushbu maktab zamonaviy sport inshooti sifatida barcha xalqaro standartlarga javob beradi. Binoda professional boks zallari, mashg'ulot maydonchalari, zamonaviy kiyinish xonalari va tibbiy xizmat xonasi mavjud. Qurilishda xavfsizlik, shamollatish va energiya samaradorligi kabi muhim jihatlarga alohida e'tibor qaratilgan.
+              {{ 'featuredProject.projectDescription' | translate }}
+
             </p>
-            
+
             <!-- Features -->
             <div class="grid grid-cols-2 gap-4 mb-8">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-[#C4751A]/10 rounded-lg flex items-center justify-center">
                   <i class="fas fa-check text-[#C4751A]"></i>
                 </div>
-                <span class="text-gray-700">Xalqaro standartlar</span>
+                <span class="text-gray-700">{{ 'featuredProject.feature1' | translate }}</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-[#C4751A]/10 rounded-lg flex items-center justify-center">
                   <i class="fas fa-shield-alt text-[#C4751A]"></i>
                 </div>
-                <span class="text-gray-700">Yuqori xavfsizlik</span>
+                <span class="text-gray-700">{{ 'featuredProject.feature2' | translate }}</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-[#C4751A]/10 rounded-lg flex items-center justify-center">
                   <i class="fas fa-dumbbell text-[#C4751A]"></i>
                 </div>
-                <span class="text-gray-700">Professional jihozlar</span>
+                <span class="text-gray-700">{{ 'featuredProject.feature3' | translate }}</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-[#C4751A]/10 rounded-lg flex items-center justify-center">
                   <i class="fas fa-leaf text-[#C4751A]"></i>
                 </div>
-                <span class="text-gray-700">Energiya samaradorligi</span>
+                <span class="text-gray-700">{{ 'featuredProject.feature4' | translate }}</span>
               </div>
             </div>
-            
-            <a 
-              routerLink="/project" 
+
+            <a
+              routerLink="/project"
               class="btn-primary inline-flex items-center gap-2 group"
             >
-              <span>Barcha loyihalar</span>
+              <span>{{ 'featuredProject.allProjects' | translate }}</span>
               <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
@@ -179,20 +165,22 @@
   </div>
 </section>
 
+
+
 <!-- Values Section -->
 <section class="section-padding bg-white">
   <div class="container mx-auto px-6 md:px-12 lg:px-20">
     <!-- Section Header -->
     <div class="text-center mb-16 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
-        Bizning qadriyatlar
+        {{ 'valuesSection.tag' | translate }}
       </span>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        Muvaffaqiyatimiz asoslari
+        {{ 'valuesSection.title' | translate }}
       </h2>
       <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
     </div>
-    
+
     <!-- Values Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Value 1 -->
@@ -202,12 +190,12 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
           </svg>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">Sifat</h3>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ 'valuesSection.value1Title' | translate }}</h3>
         <p class="text-gray-600 leading-relaxed">
-          Har bir loyihada eng yuqori sifat standartlariga rioya qilamiz va mijozlarimiz kutganidan ham yaxshiroq natijalar taqdim etamiz
+          {{ 'valuesSection.value1Text' | translate }}
         </p>
       </div>
-      
+
       <!-- Value 2 -->
       <div class="text-center group animate-fadeIn" style="animation-delay: 0.2s">
         <div class="w-24 h-24 bg-[#C4751A]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C4751A] transition-all duration-300">
@@ -215,12 +203,12 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">Vaqtni tejash</h3>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ 'valuesSection.value2Title' | translate }}</h3>
         <p class="text-gray-600 leading-relaxed">
-          Loyihalarni belgilangan muddatlarda yetkazib berish va mijozlarimiz vaqtini qadrlash bizning ustuvor vazifamizdir
+          {{ 'valuesSection.value2Text' | translate }}
         </p>
       </div>
-      
+
       <!-- Value 3 -->
       <div class="text-center group animate-fadeIn" style="animation-delay: 0.4s">
         <div class="w-24 h-24 bg-[#C4751A]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C4751A] transition-all duration-300">
@@ -228,9 +216,9 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
           </svg>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">Innovatsiya</h3>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ 'valuesSection.value3Title' | translate }}</h3>
         <p class="text-gray-600 leading-relaxed">
-          Zamonaviy texnologiyalar va innovatsion yechimlarni qo'llash orqali eng samarali natijalarni ta'minlaymiz
+          {{ 'valuesSection.value3Text' | translate }}
         </p>
       </div>
     </div>
@@ -243,54 +231,54 @@
     <!-- Section Header -->
     <div class="text-center mb-12 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
-        Galereya
+        {{ 'gallerySection.tag' | translate }}
       </span>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        Loyihalarimizdan lavhalar
+     {{ 'gallerySection.title' | translate }}
       </h2>
       <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
     </div>
-    
+
     <!-- Gallery Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="group relative overflow-hidden rounded-2xl shadow-lg card-hover animate-fadeIn">
-        <img 
-          src="../../../../../assets/image/slider_6.jpg" 
-          alt="Loyiha 1" 
+        <img
+          src="../../../../../assets/image/slider_6.jpg"
+          alt="Loyiha 1"
           class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
           <div class="text-white">
-            <h3 class="text-xl font-bold mb-2">Qurilish jarayoni</h3>
-            <p class="text-white/80">Professional yondashuv</p>
+            <h3 class="text-xl font-bold mb-2">{{'gallerySection.item1Title'|translate}}</h3>
+            <p class="text-white/80">{{'gallerySection.item1Text'|translate}}</p>
           </div>
         </div>
       </div>
-      
+
       <div class="group relative overflow-hidden rounded-2xl shadow-lg card-hover animate-fadeIn" style="animation-delay: 0.1s">
-        <img 
-          src="../../../../../assets/image/slider_1.jpg" 
-          alt="Loyiha 2" 
+        <img
+          src="../../../../../assets/image/slider_1.jpg"
+          alt="Loyiha 2"
           class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
           <div class="text-white">
-            <h3 class="text-xl font-bold mb-2">Zamonaviy texnologiyalar</h3>
-            <p class="text-white/80">Ilg'or uskunalar</p>
+            <h3 class="text-xl font-bold mb-2">{{'gallerySection.item2Title'|translate}}</h3>
+            <p class="text-white/80">{{'gallerySection.item2Text'|translate}}</p>
           </div>
         </div>
       </div>
-      
+
       <div class="group relative overflow-hidden rounded-2xl shadow-lg card-hover animate-fadeIn" style="animation-delay: 0.2s">
-        <img 
-          src="../../../../../assets/image/slider_3.jpg" 
-          alt="Loyiha 3" 
+        <img
+          src="../../../../../assets/image/slider_3.jpg"
+          alt="Loyiha 3"
           class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
           <div class="text-white">
-            <h3 class="text-xl font-bold mb-2">Tugallangan loyihalar</h3>
-            <p class="text-white/80">Sifatli natijalar</p>
+            <h3 class="text-xl font-bold mb-2">{{'gallerySection.item3Title'|translate}}</h3>
+            <p class="text-white/80">{{'gallerySection.item3Text'|translate}}</p>
           </div>
         </div>
       </div>
@@ -303,18 +291,18 @@
   <div class="absolute inset-0 bg-black/70"></div>
   <div class="relative z-10 container mx-auto px-6 md:px-12 lg:px-20 text-center">
     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-fadeIn">
-      Keling, birgalikda ajoyib loyihalar yaratamiz
+      {{ 'ctaSection.title' | translate }}
     </h2>
     <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.2s">
-      Cosco Engineering jamoasi sizning g'oyalaringizni haqiqatga aylantirish uchun tayyor
+      {{ 'ctaSection.text' | translate }}
     </p>
     <div class="animate-fadeIn" style="animation-delay: 0.4s">
-      <a 
-        routerLink="/contact" 
+      <a
+        routerLink="/contact"
         class="btn-primary inline-flex items-center gap-2 group text-lg"
       >
-        <span>Biz bilan bog'laning</span>
-        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <span>{{ 'ctaSection.button' | translate }}</span>
+      <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>

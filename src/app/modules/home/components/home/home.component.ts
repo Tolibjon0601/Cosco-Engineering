@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule,RouterLink,TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -12,48 +13,46 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent  implements AfterViewInit {
   slides = [
     {
-      title: 'Yirik inshootlardan tortib, uy-joygacha — har bir loyiha biz uchun muhim.',
-      button: 'Batafsil maʼlumot',
-      image: 'assets/image/slider_3.jpg'
+      titleKey: 'slider.title1',
+      buttonKey: 'slider.button'
+      , image: 'assets/image/slider_3.jpg'
     },
     {
-      title: 'Cosco Engineering bilan orzularingizdagi binoni yarating.',
-      button: 'Batafsil maʼlumot',
+      titleKey: 'slider.title2',
+      buttonKey: 'slider.button',
       image: 'assets/image/slider_1.jpg'
     },
     {
-      title: 'Bizni tanlang – muhandislik, innovatsiya va tajriba bir joyda jam!',
-      button: 'Batafsil maʼlumot',
+      titleKey: 'slider.title3',
+      buttonKey: 'slider.button',
       image: 'assets/image/slider_2.jpg'
     },
-
-
   ];
+
 
 
   slidessecond = [
     {
-      stats: "TDP Universiteti",
-      statsDescription:
-        "Toshkent viloyati Chirchiq davlat pedagogika universitetining zamonaviy kampusi zamonaviy ta’lim standartlariga mos holda qurildi.",
-      button: "Batafsil",
-      image: "assets/image/slider_4.jpg"
+      stats: 'projects.slides.0.stats',
+      statsDescription: 'projects.slides.0.description',
+      button: 'projects.button',
+      image: 'assets/image/slider_4.jpg'
     },
     {
-      stats: "Boks maktabi",
-      statsDescription:
-        "Yosh sportchilarning salohiyatini rivojlantirish uchun barcha sharoitlarga ega bo‘lgan zamonaviy Boks mahorat maktabi qurib bitkazildi.",
-      button: "Batafsil",
-      image: "assets/image/slider_5.jpg"
+      stats: 'projects.slides.1.stats',
+      statsDescription: 'projects.slides.1.description',
+      button: 'projects.button',
+      image: 'assets/image/slider_5.jpg'
     },
     {
-      stats: "QarDU binosi",
-      statsDescription:
-        "Qarshi davlat universitetining yangi binosi — fan, innovatsiya va zamonaviy muhitni uyg‘unlashtirgan arxitekturaviy yechim.",
-      button: "Batafsil",
-      image: "assets/image/slider_6.jpg"
+      stats: 'projects.slides.2.stats',
+      statsDescription: 'projects.slides.2.description',
+      button: 'projects.button',
+      image: 'assets/image/slider_6.jpg'
     }
   ];
+
+
 
 ngAfterViewInit(): void {
   const swiperEl: any = document.querySelector('swiper-container');
