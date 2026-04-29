@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
@@ -10,5 +10,5 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-
+  constructor(public translate: TranslateService) {}
 }

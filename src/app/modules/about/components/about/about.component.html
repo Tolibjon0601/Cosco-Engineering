@@ -1,9 +1,7 @@
 <!-- Hero Section -->
 <div class="relative w-full h-[70vh] bg-cover bg-center bg-fixed" style="background-image: url('assets/image/page-title-bg.jpg');">
-  <!-- Modern Gradient Overlay -->
   <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
 
-  <!-- Content -->
   <div class="relative z-10 h-full flex items-center">
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
       <div class="max-w-3xl animate-fadeIn">
@@ -13,7 +11,6 @@
         <p class="text-xl text-white/80 mb-8 animate-slideInLeft" style="animation-delay: 0.2s">
           {{ 'aboutUs.subtitle' | translate }}
         </p>
-        <!-- Breadcrumb -->
         <nav class="flex items-center gap-3 text-white/60 animate-slideInLeft" style="animation-delay: 0.4s">
           <a routerLink="/" class="hover:text-[#C4751A] transition-colors duration-300">
             <i class="fas fa-home"></i>
@@ -21,11 +18,24 @@
           <span>/</span>
           <span class="text-white">{{ 'aboutUs.breadcrumb.current' | translate }}</span>
         </nav>
+ 
       </div>
+             <div class="hero-catalog-cta animate-slideInLeft" style="animation-delay: 0.5s">
+          <a
+            href="https://drive.google.com/file/d/1wPyTV-_zeK_-jq_00JDnQXGU01A06sIz/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="about-catalog-btn group mx-auto mt-12"
+          >
+            <span>{{ translate.currentLang === 'ru' ? 'Скачать каталог' : 'Katalogni yuklab olish' }}</span>
+            <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l4-4m-4 4l-4-4m-5 8h18"></path>
+            </svg>
+          </a>
+        </div>
     </div>
   </div>
 
-  <!-- Scroll Indicator -->
   <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -37,7 +47,6 @@
 <section class="section-padding bg-white">
   <div class="container mx-auto px-6 md:px-12 lg:px-20">
     <div class="max-w-4xl mx-auto">
-      <!-- Section Header -->
       <div class="text-center mb-12 animate-fadeIn">
         <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
           {{ 'company.historyLabel' | translate }}
@@ -48,10 +57,8 @@
         <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
       </div>
 
-      <!-- Content -->
       <div class="space-y-6 text-gray-600 text-lg leading-relaxed animate-fadeIn">
         <p *ngFor="let text of ('company.paragraphs' | translate)">{{ text }}</p>
-
       </div>
     </div>
   </div>
@@ -85,7 +92,6 @@
 <!-- Featured Project Section -->
 <section class="section-padding bg-gray-50">
   <div class="container mx-auto px-6 md:px-12 lg:px-20">
-    <!-- Section Header -->
     <div class="text-center mb-16 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
         {{ 'featuredProject.tag' | translate }}
@@ -95,14 +101,11 @@
       </h2>
       <p class="text-gray-600 text-lg max-w-3xl mx-auto">
         {{ 'featuredProject.description' | translate }}
-
       </p>
     </div>
 
-    <!-- Project Showcase -->
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div class="grid grid-cols-1 lg:grid-cols-2">
-        <!-- Image -->
         <div class="h-96 lg:h-full relative group overflow-hidden">
           <img
             src="assets/image/slider_5.jpg"
@@ -112,16 +115,13 @@
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
 
-        <!-- Content -->
         <div class="p-10 lg:p-16 flex items-center">
           <div>
             <h3 class="text-3xl font-bold text-gray-900 mb-6">{{ 'featuredProject.projectTitle' | translate }}</h3>
             <p class="text-gray-600 text-lg leading-relaxed mb-8">
               {{ 'featuredProject.projectDescription' | translate }}
-
             </p>
 
-            <!-- Features -->
             <div class="grid grid-cols-2 gap-4 mb-8">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-[#C4751A]/10 rounded-lg flex items-center justify-center">
@@ -165,12 +165,9 @@
   </div>
 </section>
 
-
-
 <!-- Values Section -->
 <section class="section-padding bg-white">
   <div class="container mx-auto px-6 md:px-12 lg:px-20">
-    <!-- Section Header -->
     <div class="text-center mb-16 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
         {{ 'valuesSection.tag' | translate }}
@@ -181,9 +178,7 @@
       <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
     </div>
 
-    <!-- Values Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Value 1 -->
       <div class="text-center group animate-fadeIn">
         <div class="w-24 h-24 bg-[#C4751A]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C4751A] transition-all duration-300">
           <svg class="w-12 h-12 text-[#C4751A] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +191,6 @@
         </p>
       </div>
 
-      <!-- Value 2 -->
       <div class="text-center group animate-fadeIn" style="animation-delay: 0.2s">
         <div class="w-24 h-24 bg-[#C4751A]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C4751A] transition-all duration-300">
           <svg class="w-12 h-12 text-[#C4751A] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,7 +203,6 @@
         </p>
       </div>
 
-      <!-- Value 3 -->
       <div class="text-center group animate-fadeIn" style="animation-delay: 0.4s">
         <div class="w-24 h-24 bg-[#C4751A]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C4751A] transition-all duration-300">
           <svg class="w-12 h-12 text-[#C4751A] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -228,7 +221,6 @@
 <!-- Gallery Section -->
 <section class="section-padding bg-gray-50">
   <div class="container mx-auto px-6 md:px-12 lg:px-20">
-    <!-- Section Header -->
     <div class="text-center mb-12 animate-fadeIn">
       <span class="inline-block text-[#C4751A] text-sm font-semibold uppercase tracking-wider mb-4">
         {{ 'gallerySection.tag' | translate }}
@@ -239,7 +231,6 @@
       <div class="w-24 h-1 bg-[#C4751A] mx-auto"></div>
     </div>
 
-    <!-- Gallery Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="group relative overflow-hidden rounded-2xl shadow-lg card-hover animate-fadeIn">
         <img
