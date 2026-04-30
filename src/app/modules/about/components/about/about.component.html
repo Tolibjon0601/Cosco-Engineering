@@ -27,8 +27,15 @@
             rel="noopener noreferrer"
             class="about-catalog-btn group mx-auto mt-12"
           >
-            <span>{{ translate.currentLang === 'ru' ? 'Скачать каталог' : 'Katalogni yuklab olish' }}</span>
-            <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>
+  {{
+    translate.currentLang === 'ru'
+      ? 'Скачать каталог'
+      : translate.currentLang === 'en'
+      ? 'Download catalog'
+      : 'Katalogni yuklab olish'
+  }}
+</span>            <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l4-4m-4 4l-4-4m-5 8h18"></path>
             </svg>
           </a>

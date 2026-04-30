@@ -20,6 +20,7 @@ export class HeaderComponent {
   languages = [
     { code: 'uz', name: 'Uzbek', flag: 'assets/media/flags/uzbekistan.svg' },
     { code: 'ru', name: 'Russian', flag: 'assets/media/flags/russia.svg' },
+    { code: 'en', name: 'English', flag: 'assets/media/flags/united-kingdom.svg' },
   ];
 
   constructor(private translateService: TranslateService) {

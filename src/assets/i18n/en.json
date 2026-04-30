@@ -1,0 +1,373 @@
+{
+  "nav": {
+    "main": "Home",
+    "about": "About Us",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "slider": {
+    "title1": "From large-scale constructions to residential buildings — every project matters to us.",
+    "title2": "Build your dream building with Cosco Engineering.",
+    "title3": "Choose us – engineering, innovation, and experience all in one place!",
+    "button": "Learn more"
+  },
+  "about": {
+    "subtitle": "About Us",
+    "title": "A New Standard of Modern Construction",
+    "description": {
+      "heading": "Cosco Engineering is a combination of modern technologies, quality engineering, and reliable construction",
+      "p1": "Our company carries out all stages from engineering to full construction completion. Every project is a symbol of responsibility and trust for us.",
+      "p2": "We design and implement large industrial facilities, residential complexes, and commercial buildings with high quality. Technical excellence, environmental safety, and economic efficiency are our main priorities.",
+      "button": "Learn more",
+      "features": {
+        "1": {
+          "title": "Large-scale projects",
+          "desc": "Cosco Engineering has successfully implemented many large infrastructure and residential projects across Uzbekistan."
+        },
+        "2": {
+          "title": "Innovative approach",
+          "desc": "We use modern technologies and advanced engineering solutions in every construction. This sets us apart."
+        },
+        "3": {
+          "title": "Reliable partnership",
+          "desc": "We have carried out many successful projects in cooperation with the public and private sectors. We are trusted — because we deliver results."
+        }
+      }
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Completed projects",
+      "team": "Professional team",
+      "satisfaction": "Customer satisfaction"
+    },
+    "features": {
+      "1": {
+        "title": "Large-scale projects",
+        "desc": "Cosco Engineering has successfully implemented many large infrastructure and residential projects across Uzbekistan."
+      },
+      "2": {
+        "title": "Innovative approach",
+        "desc": "We use modern technologies and advanced engineering solutions in every construction. This sets us apart."
+      },
+      "3": {
+        "title": "Reliable partnership",
+        "desc": "We have carried out many successful projects in cooperation with the public and private sectors. We are trusted — because we deliver results."
+      }
+    },
+    "button": "Learn more"
+  },
+
+  "projects": {
+    "hero": {
+      "title": "Our Projects",
+      "description": "Successfully completed and ongoing projects",
+      "breadcrumb": "Projects"
+    },
+    "sectionLabel": "About our project",
+    "button": "Learn more",
+    "slides": [
+      {
+        "stats": "TDP University",
+        "description": "The modern campus of Chirchiq State Pedagogical University in Tashkent region was built in accordance with modern educational standards."
+      },
+      {
+        "stats": "Boxing School",
+        "description": "A modern boxing training school with all conditions for developing young athletes has been completed."
+      },
+      {
+        "stats": "QarDU Building",
+        "description": "The new building of Karshi State University is an architectural solution combining science, innovation, and a modern environment."
+      }
+    ],
+    "sectionTag": "Projects",
+    "sectionTitle": "Constructed and planned facilities",
+    "allProjects": "All projects",
+    "details": "View details",
+    "project1": {
+      "status": "Completed project",
+      "title": "Boxing Skills School",
+      "location": "Tashkent, Yunusabad 9"
+    },
+    "comingSoon": {
+      "title": "New project coming soon",
+      "subtitle": "Stay tuned..."
+    }
+  },
+
+  "why": {
+    "titleTag": "Why choose us?",
+    "title": "Advantages of Cosco Engineering",
+    "feature1": {
+      "title": "Strong infrastructure",
+      "desc": "A powerful infrastructure built on modern technologies at construction sites."
+    },
+    "feature2": {
+      "title": "Innovative design",
+      "desc": "Each project is based on modern architecture and ergonomic design principles."
+    },
+    "feature3": {
+      "title": "Experienced specialists",
+      "desc": "Our company employs qualified engineers, designers, and craftsmen."
+    },
+    "feature4": {
+      "title": "Safety standards",
+      "desc": "All safety and labor protection standards are followed during construction."
+    },
+    "feature5": {
+      "title": "Eco-friendly solutions",
+      "desc": "Projects are developed with environmentally friendly materials and attention to green areas."
+    },
+    "feature6": {
+      "title": "Full services",
+      "desc": "All stages from project preparation to commissioning are carried out by us."
+    }
+  },
+
+  "cta": {
+    "title": "Bring your project to life with us",
+    "subtitle": "Professional team, modern solutions, and guaranteed quality",
+    "button": "Contact"
+  },
+
+  "aboutUs": {
+    "title": "About Us",
+    "subtitle": "Your reliable partner in modern construction and engineering solutions",
+    "breadcrumb": {
+      "home": "Home",
+      "current": "About Us"
+    }
+  },
+
+  "company": {
+    "historyLabel": "Company history",
+    "summaryTitle": "About COSCO ENGINEERING",
+    "paragraphs": [
+      "COSCO ENGINEERING is a reliable company providing modern construction, design, and engineering services in Uzbekistan.",
+      "Since 2017, we have been successfully implementing infrastructure projects and construction works for both public and private sectors.",
+      "Based on many years of experience, qualified specialists, and advanced technologies, Cosco Engineering follows high standards in engineering, project management, and construction. Our approach is to offer comprehensive and sustainable solutions for every project.",
+      "Today, COSCO ENGINEERING has established itself as a reliable and responsible partner in the country, standing out with its technical capabilities and commitment to quality.",
+      "We prioritize innovation, safety, and efficiency. Providing solutions tailored to our clients' needs is our main mission."
+    ]
+  },
+
+  "stats": {
+    "experience": "Years of experience",
+    "projects": "Completed projects",
+    "team": "Professional team",
+    "satisfaction": "Customer satisfaction"
+  },
+
+  "featuredProject": {
+    "tag": "Featured project",
+    "title": "A confident step towards sports and a healthy lifestyle",
+    "description": "The Boxing Skills School designed and built by Cosco Engineering is a modern, safe, and comfortable sports facility for professional athletes and the younger generation.",
+    "projectTitle": "Boxing Skills School",
+    "projectDescription": "This school meets all international standards as a modern sports facility. The building includes professional boxing halls, training areas, modern changing rooms, and a medical service room. Special attention has been given to safety, ventilation, and energy efficiency.",
+    "feature1": "International standards",
+    "feature2": "High safety",
+    "feature3": "Professional equipment",
+    "feature4": "Energy efficiency",
+    "allProjects": "All projects"
+  },
+
+  "valuesSection": {
+    "tag": "Our values",
+    "title": "Foundations of our success",
+    "value1Title": "Quality",
+    "value1Text": "We adhere to the highest quality standards in every project and deliver results beyond our clients’ expectations",
+    "value2Title": "Time efficiency",
+    "value2Text": "Delivering projects on time and valuing our clients’ time is our priority",
+    "value3Title": "Innovation",
+    "value3Text": "We ensure the most effective results by applying modern technologies and innovative solutions"
+  },
+
+  "gallerySection": {
+    "tag": "Gallery",
+    "title": "Highlights from our projects",
+    "item1Title": "Construction process",
+    "item1Text": "Professional approach",
+    "item2Title": "Modern technologies",
+    "item2Text": "Advanced equipment",
+    "item3Title": "Completed projects",
+    "item3Text": "High-quality results"
+  },
+
+  "ctaSection": {
+    "title": "Let’s create amazing projects together",
+    "text": "The Cosco Engineering team is ready to turn your ideas into reality",
+    "button": "Contact us"
+  },
+
+  "projectsProject": {
+    "stats": {
+      "label": "Project statistics"
+    },
+    "slides": [
+      {
+        "title": "BOXING SKILLS SCHOOL",
+        "description": "This sports facility designed and built by Cosco Engineering is equipped according to all modern requirements. Optimal conditions have been created for athletes' effective training and competition preparation."
+      },
+      {
+        "title": "KARSHI STATE UNIVERSITY DORMITORY",
+        "description": "This dormitory designed for students is a project that combines comfort, safety, and functionality. All necessary communications, lighting, and ventilation systems are implemented using modern technologies."
+      },
+      {
+        "title": "CHIRCHIQ STATE PEDAGOGICAL UNIVERSITY BUILDING",
+        "description": "This important educational facility was built using high-quality materials and advanced construction technologies. All conditions for the educational process have been created."
+      }
+    ]
+  },
+
+  "portfolio": {
+    "section": {
+      "label": "Portfolio",
+      "title": "Our completed projects"
+    },
+    "items": [
+      {
+        "category": "Sports facility",
+        "title": "Boxing Skills School",
+        "location": "Tashkent, Yunusabad district",
+        "year": "2023"
+      },
+      {
+        "category": "Residential",
+        "title": "Modern residential complex",
+        "location": "Tashkent, Chilanzar district",
+        "year": "2022"
+      },
+      {
+        "category": "Commercial building",
+        "title": "Business center",
+        "location": "Tashkent, Mirzo Ulugbek district",
+        "year": "2023"
+      },
+      {
+        "category": "Industrial",
+        "title": "Production complex",
+        "location": "Tashkent region",
+        "year": "2022"
+      },
+      {
+        "category": "Education",
+        "title": "Modern school building",
+        "location": "Tashkent, Bektemir district",
+        "year": "2021"
+      },
+      {
+        "category": "New project",
+        "title": "New project",
+        "location": "Coming soon...",
+        "year": ""
+      }
+    ]
+  },
+
+  "services": {
+    "subtitle": "Services",
+    "title": "Services we offer",
+    "items": [
+      {
+        "title": "Construction works",
+        "description": "Construction of residential, commercial, and industrial buildings"
+      },
+      {
+        "title": "Design",
+        "description": "Development of architectural and engineering projects"
+      },
+      {
+        "title": "Project management",
+        "description": "Professional project management and supervision"
+      },
+      {
+        "title": "Engineering",
+        "description": "Comprehensive engineering solutions and consulting"
+      },
+      {
+        "title": "Reconstruction",
+        "description": "Adapting buildings to modern standards"
+      },
+      {
+        "title": "Technical supervision",
+        "description": "Quality and safety control of construction"
+      }
+    ]
+  },
+
+  "ctaProject": {
+    "title": "We are ready for your project",
+    "description": "We implement projects of any complexity using a professional team and modern technologies",
+    "button": "Start the project"
+  },
+
+  "contact": {
+    "heroTitle": "Contact us",
+    "heroSubtitle": "Get in touch to discuss your project",
+    "breadcrumb": "Contact",
+
+    "infoTitle": "Contact information",
+    "infoHeader": "Get in touch",
+    "infoText": "Contact us to learn more about your project.",
+
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Working hours",
+    "hoursText": "Monday - Friday: 9:00 - 18:00 \n Saturday: 9:00 - 15:00",
+
+    "socialTitle": "Social networks:",
+
+    "formTitle": "Send a message",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "phone": "Phone",
+      "phonePlaceholder": "+998 __ ___ __ __",
+      "email": "Email",
+      "emailPlaceholder": "email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select subject",
+      "subjectBuild": "Construction services",
+      "subjectDesign": "Design",
+      "subjectConsulting": "Consulting",
+      "subjectOther": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Write your message...",
+      "submit": "Send message"
+    },
+
+    "mapLabel": "Our location",
+    "mapTitle": "Visit our office",
+
+    "ctaTitle": "Start your project today",
+    "ctaSubtitle": "Contact us for professional consultation and quality service",
+    "ctaCall": "Call",
+    "ctaMail": "Send email",
+    "addressText": "Tashkent city, Mirobod district<br />Mironshoh 6-boshiberk street, 18/141"
+  },
+
+  "footer": {
+    "companyDescription": "Cosco Engineering — a modern construction and engineering solutions company. We prioritize quality and trust.",
+    "quickLinks": "Quick links",
+    "links": {
+      "home": "Home",
+      "about": "About company",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact information",
+      "phone": "Phone",
+      "email": "Email",
+      "addressLabel": "Address",
+      "addressText": "Tashkent city, Mirobod district Mironshoh 6-boshiberk street, 18/141"
+    },
+    "visit": {
+      "title": "Our location"
+    },
+    "bottom": {
+      "createdBy": "Website created by:"
+    },
+    "copyright": "© {{year}} Cosco Engineering. All rights reserved."
+  }
+}
