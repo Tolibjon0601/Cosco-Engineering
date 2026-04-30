@@ -16,7 +16,7 @@ export class HeaderComponent {
   isScrolled = false;
   isMobile = false;
 
-  selectedLang = 'uz';
+  selectedLang = 'en';
   languages = [
     { code: 'uz', name: 'Uzbek', flag: 'assets/media/flags/uzbekistan.svg' },
     { code: 'ru', name: 'Russian', flag: 'assets/media/flags/russia.svg' },
@@ -24,7 +24,7 @@ export class HeaderComponent {
   ];
 
   constructor(private translateService: TranslateService) {
-    const savedLang = localStorage.getItem('lang') || 'uz';
+    const savedLang = localStorage.getItem('lang') || 'en';
     this.selectedLang = savedLang;
     this.translateService.use(savedLang);
   }
